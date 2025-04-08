@@ -8,7 +8,7 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 - **Curso:** Sistemas para Internet
 - **Instituição:** Instituto Federal do Acre — Ifac  
-  🔗 Site: [portal.ifac.edu.br](portal.ifac.edu.br)
+  🔗 Site: [ifac.edu.br/](www.ifac.edu.br/)
 - **Período letivo:** [1o. semestre de 2025]
 - **Professor:** [Jonas Pontes]  
   🔗 Lattes: [http://lattes.cnpq.br/3068708429112735]
@@ -58,11 +58,11 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 ## 🖥️ Recursos Tecnológicos
 > *Laboratório de Informática;*
-> *StarUML* — 🔗 [https://staruml.io/](https://staruml.io);
+> *StarUML* — 🔗 [staruml.io/](https://staruml.io);
 
 > *Java Development Kit (JDK)* — 🔗 [https://www.oracle.com/java/technologies/downloads](https://www.oracle.com/java/technologies/downloads);
 
-> *Eclipse* — 🔗 [https://eclipseide.org](https://eclipseide.org);
+> *Eclipse* — 🔗 [eclipseide.org](https://eclipseide.org);
 
 > *GitHub* — 🔗 [github.com](github.com);
 
