@@ -55,10 +55,13 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 ## 🖥️ Recursos Tecnológicos
 > *Laboratório de Informática;*
-> *StarUML* — 🔗 Site: [https://staruml.io/](https://staruml.io);
-> *Java Development Kit (JDK)* — 🔗 Site: [https://www.oracle.com/java/technologies/downloads](https://www.oracle.com/java/technologies/downloads);
-> *Eclipse* — 🔗 Site: [https://eclipseide.org](https://eclipseide.org);
-> *GitHub* — 🔗 Site: [github.com](github.com);
+> *StarUML* — 🔗 [https://staruml.io/](https://staruml.io);
+
+> *Java Development Kit (JDK)* — 🔗 [https://www.oracle.com/java/technologies/downloads](https://www.oracle.com/java/technologies/downloads);
+
+> *Eclipse* — 🔗 [https://eclipseide.org](https://eclipseide.org);
+
+> *GitHub* — 🔗 [github.com](github.com);
 
 ---
 
@@ -66,6 +69,7 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 ## 📝 Avaliação
 
 > *Primeira nota parcial: uma lista de exercícios e duas provas;*
+
 > *Segunda nota parcial: uma prova, um projeto e a apresentação do projeto*
 
 ---
@@ -74,5 +78,4 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 Cada unidade da disciplina está em sua própria pasta, com exemplos práticos e diagramas.
 
-```plaintext
-A estrutura do diretório está definida no arquivo estrutura-diretorio
+A estrutura do diretório está definida no arquivo [estrutura-diretorio](estrutura-diretorio.md).
