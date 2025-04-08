@@ -97,7 +97,7 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 ### Scanner Class  
 - Importar e utilizar a classe `Scanner` para obter entrada do usuário.
 
-### `System.out.println` e `System.out.print`  
+#### `System.out.println` e `System.out.print`  
 - Mostrar como exibir informações no console.
 
 ---
@@ -222,8 +222,7 @@ SOMA = 40
 
 Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com **quatro casas decimais** conforme exemplos.
 
-**Fórmula da área:**  
-`area = π * raio²`  
+**Fórmula da área:** `area = π * raio²`  
 **Considere:** `π = 3.14159`
 
 **Exemplo:**
