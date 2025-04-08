@@ -8,7 +8,7 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 - **Curso:** Sistemas para Internet
 - **Instituição:** Instituto Federal do Acre — Ifac  
-  🔗 Site: [ifac.edu.br/](www.ifac.edu.br/)
+  🔗 Site: [ifac.edu.br/](https://www.ifac.edu.br/)  
 - **Período letivo:** [1o. semestre de 2025]
 - **Professor:** [Jonas Pontes]  
   🔗 Lattes: [http://lattes.cnpq.br/3068708429112735]
