@@ -47,8 +47,11 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 ## 📝 Metodologia
 
  > *i. Exposição de conteúdos, interação e reflexões em grupos;*
+
  > *ii. Pesquisas realizadas dentro e fora da sala de aula;*
+
  > *iii. Resolução de tarefas, individual e/ou em grupos;*
+
  > *v. Discussão e resolução de situações-problemas, com implementações na linguagem Java.*
 
 ---
@@ -78,4 +81,4 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 Cada unidade da disciplina está em sua própria pasta, com exemplos práticos e diagramas.
 
-A estrutura do diretório está definida no arquivo [estrutura-diretorio](estrutura-diretorio.md).
+A estrutura do diretório está definida por unidade temática. Cada unidade é um pasta, que por sua vez contém os projetos e um arquivo de orientação (README.md).
