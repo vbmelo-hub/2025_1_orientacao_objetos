@@ -51,7 +51,7 @@ class MeuPrograma {
 
 # Estrutura Sequencial
 
-## ☕ 1. Intorudução à sintaxe Java
+## ☕ 1. Introdução à sintaxe Java
 
 ### 🎯 Objetivo: 
   Apresentar a estrutura básica de um programa Java e os conceitos fundamentais.
