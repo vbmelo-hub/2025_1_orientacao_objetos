@@ -8,7 +8,7 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 - **Curso:** Sistemas para Internet
 - **Instituição:** Instituto Federal do Acre — Ifac  
-  🔗 Site: [ifac.edu.br/](https://www.ifac.edu.br/)  
+  🔗 Site: [https://www.ifac.edu.br/](https://www.ifac.edu.br/)  
 - **Período letivo:** [1o. semestre de 2025]
 - **Professor:** [Jonas Pontes]  
   🔗 Lattes: [http://lattes.cnpq.br/3068708429112735]
@@ -30,16 +30,16 @@ Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na dis
 
 ## 📚 Unidades Temáticas
 
-| Unidade | Tema                                                       |
-|--------:|------------------------------------------------------------|
-|   01    | Linguagem de Programação Java                              |
-|   02    | Orientação a Objetos Básica                                |
-|   03    | Modificadores de Acesso e Atributos de Classe              |
-|   04    | Herança, Reescrita e Polimorfismo                          |
-|   05    | Classes Abstratas e Interfaces                             |
-|   06    | Exceções e Controle de Erros                               |
-|   07    | Persistência de Dados em Java                              |
-|   08    | Concepção de Protótipos de Sistemas Orientados a Objetos   |
+| Unidade | Tema                                                       | Diretório                       |
+|--------:|------------------------------------------------------------|---------------------------------|
+|   01    | Linguagem de Programação Java                              | [unidade-01-linguagem-java](unidade-01-linguagem-java)|
+|   02    | Orientação a Objetos Básica                                | [unidade-02-oo-basica](unidade-02-oo-basica)|
+|   03    | Modificadores de Acesso e Atributos de Classe              | [unidade-03-mod-acesso-atributos-de-classe](unidade-03-mod-acesso-atributos-de-classe)|
+|   04    | Herança, Reescrita e Polimorfismo                          | [unidade-04-heranca-reescrita-e-polimorfismo](unidade-04-heranca-reescrita-e-polimorfismo)|
+|   05    | Classes Abstratas e Interfaces                             | [unidade-05-classes-abstratas-e-interfaces](unidade-05-classes-abstratas-e-interfaces)|
+|   06    | Exceções e Controle de Erros                               | [unidade-06-excecoes-e-controle-de-erros](unidade-06-excecoes-e-controle-de-erros)|
+|   07    | Persistência de Dados em Java                              | [unidade-07-persistencia-de-dados-em-java](unidade-07-persistencia-de-dados-em-java)|
+|   08    | Concepção de Protótipos de Sistemas Orientados a Objetos   | [unidade-08-prototipo](unidade-08-prototipo)|
 
 ---
 
