@@ -1,6 +1,6 @@
 # 💻 Disciplina: Programação Orientada a Objetos com Java
 
-Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na disciplina **Programação Orientada a Objetos com Java**, parte do curso de graduação em **[Nome do Curso]** oferecido pelo **[Nome da Instituição]**.
+Este repositório reúne os conteúdos, exemplos e projetos desenvolvidos na disciplina **Orientada a Objetos com Java**, parte do curso de graduação em **Sistemas para Internet** oferecido pelo **Instituto Federal do Acre/Campus Rio Branco**.
 
 ---
 
