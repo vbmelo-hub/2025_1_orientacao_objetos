@@ -202,7 +202,7 @@ Em casting explícito, um valor não é arredondado; ele é "truncado".
 | int      | (byte)   | (sort) | (char) | -     | impl.  | impl.   | impl.   |
 | long     | (byte)   | (sort) | (char) | (int) | -      | impl.   | impl.   |
 | float    | (byte)   | (sort) | (char) | (int) | (long) | -       | impl.   |
-| double   | (byte)   | (sort) | (char) | (int) | (long) | (float) | impl.   |
+| double   | (byte)   | (sort) | (char) | (int) | (long) | (float) | -    |
 
 
 ---
@@ -227,7 +227,7 @@ Saída:
 SOMA = 40
 ```
 
----
+---------
 
 ### Exercício 02
 
