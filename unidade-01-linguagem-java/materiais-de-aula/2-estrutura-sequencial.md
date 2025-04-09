@@ -104,6 +104,7 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 - System.out.printf.
 - System.err.println.
 
+⚠️ Com System.out.printf, o uso da vírgula ou do ponto para indicar casas decimais depende da configuração de região do computador. É possível alterar isso diretamente no código com a classe Locale.
 ---
 
 ## Operadores Aritméticos
@@ -227,8 +228,6 @@ Saída:
 SOMA = 40
 ```
 
----------
-
 ### Exercício 02
 
 Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com **quatro casas decimais** conforme exemplos.
@@ -247,8 +246,6 @@ Saída:
 ```
 A=12.5664
 ```
-
----
 
 ### Exercício 03
 
@@ -270,8 +267,6 @@ Saída:
 DIFERENCA = -26
 ```
 
----
-
 ### Exercício 04
 
 Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por hora e calcule o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com **duas casas decimais**.
@@ -291,8 +286,6 @@ NUMBER = 25
 SALARY = U$ 550.00
 ```
 
----
-
 ### Exercício 05
 
 Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
@@ -310,7 +303,6 @@ Saída:
 VALOR A PAGAR: R$ 15.50
 ```
 
----
 
 ### Exercício 06
 
