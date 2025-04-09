@@ -194,8 +194,7 @@ Em casting explícito, um valor não é arredondado; ele é "truncado".
 
 #### Tabela de castings possíveis
 
-| Para: | byte | sort | char | int | long | float | double |
-| De:   |      |      |      |     |      |       |        |
+| De ⬇️ Para ➡️ | byte     | sort   | char   | int   | long   | float   | double  |
 |----------|----------|--------|--------|-------|--------|---------|---------|
 | byte     | -        | impl.  | (char) | impl. | impl.  | impl.   | impl.   |
 | sort     | (byte)   | -      | (char) | impl. | impl.  | impl.   | impl.   |
