@@ -1,6 +1,6 @@
 # ☕♨ Roteiro de aula: a linguagem de programação Java  
 
-# 📅 Terça-feira, 8/4/2025 
+>> 📅 Terça-feira, 8/4/2025 
 
 ---
 
@@ -56,13 +56,17 @@ class MeuPrograma {
 ### 🎯 Objetivo: 
   Apresentar a estrutura básica de um programa Java e os conceitos fundamentais.
 
+
+---
+
 ### Estrutura Básica
 - Declaração de classes e métodos.
 - Método `main` como ponto de entrada.
-- I/O em Java.
+- Saída em Java com System.out.println.
+
+---
 
 ### Variáveis e Tipos de Dados
-- Declaração e inicialização de variáveis.
 - Tipos primitivos: `int`, `double`, `char`, `boolean`.
 - Tabela de tipos, tamanho do dado (em bits) e intervalo numérico.
 
@@ -75,46 +79,30 @@ class MeuPrograma {
 | `float`  | 32             | ~1.4 x 10⁻⁴⁵                  | ~3.4 x 10³⁸                    |
 | `double` | 64             | ~4.9 x 10⁻³²⁴                 | ~1.8 x 10³⁰⁸                   |
 | `char`   | 16             | 0 (caractere Unicode)         | 65.535                         |
-| `boolean`| 1 (não especificado) | `false`                   | `true`                         |
+| `boolean`| 1 (não especificado) | `false`                   | `true` |
 
-
+- Declaração e inicialização de variáveis.
 
 ### Exemplo Prático
 - Escrever um programa simples que declare variáveis de diferentes tipos.
 
-### Exercícios
-- Criar um programa que calcula e mostre o resultado das quatro operações básicas entre duas variáveis declaradas e inicializadas.
+---
 
-
+>> 📅 Terça-feira, 8/4/2025 
 
 ## Entrada e saída em Java
 
 ### 🎯 Objetivo:
 Ensinar como interagir com o usuário, receber dados e exibir informações.
 
----
-
-### Scanner Class  
+### Entrada: classe Scanner e variável in da classe System
 - Importar e utilizar a classe `Scanner` para obter entrada do usuário.
 
-#### `System.out.println` e `System.out.print`  
-- Mostrar como exibir informações no console.
-
----
-
-### Exemplos Práticos  
-- Criar um programa que solicita dois números ao usuário, realiza a soma e exibe o resultado.
-
----
-
-### Exercícios  
-- Escrever um programa que calcule e mostre o nome de uma pessoa e sua idade em 31 de dezembro de um determinado ano.  
-  Para isso, leia o nome da pessoa, seu ano de nascimento e o ano para o qual deseje calcular a idade.
-
-- Desenvolver um programa que pede a base e altura de um triângulo e calcula a área.
-
-- Problema **Divisão do Tesouro (OBI)**:  
-  [https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/](https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/).
+### Saída: variáveis out e err da classe System
+- System.out.println.
+- System.out.print.
+- System.out.printf.
+- System.err.println.
 
 ---
 
@@ -122,8 +110,6 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 
 ### Objetivo  
 Apresentar os operadores aritméticos básicos da linguagem Java e como utilizá-los em expressões matemáticas.
-
----
 
 ### Operadores Disponíveis
 
@@ -139,22 +125,10 @@ Apresentar os operadores aritméticos básicos da linguagem Java e como utilizá
 
 ---
 
-### Exemplos Práticos
+### Exemplos Práticos  
+- Criar um programa que solicita dois números ao usuário, realiza a soma e exibe o resultado.
 
-```java
-int a = 10;
-int b = 3;
-
-System.out.println("Soma: " + (a + b));
-System.out.println("Subtração: " + (a - b));
-System.out.println("Multiplicação: " + (a * b));
-System.out.println("Divisão: " + (a / b));
-System.out.println("Resto da divisão: " + (a % b));
-```
-
-### Exercícios 
-
-- Crie um programa que recebe dois números inteiros e mostra o resultado das 4 operações básicas entre eles: soma, subtração, multiplicação e divisão.
+- Criar um programa que calcula e mostre o resultado das quatro operações básicas entre duas variáveis declaradas e inicializadas com valores lidos do teclado.
 
 - Escreva um programa que solicita um número inteiro e mostra:
 
@@ -166,38 +140,76 @@ System.out.println("Resto da divisão: " + (a % b));
 
 - Modifique o programa para que ele aceite números double e observe as diferenças nos resultados das divisões.
 
+---
+
+### Exercícios
+  
+- Escrever um programa que mostre o nome de uma pessoa e sua idade em 31 de dezembro de um determinado ano. Para isso, leia o nome da pessoa, seu ano de nascimento e o ano para o qual deseje calcular a idade.
+
+- Desenvolver um programa que pessa a base e altura de um triângulo e calcula a sua área.
+
+- Problema **Divisão do Tesouro (OBI)**:  
+  [https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/](https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/).
+
+
+---
+
 ## Casting de Dados
 
---
-
-## O que é Casting?
+### O que é Casting?
 Casting ou conversão de tipo é o processo de transformar um tipo de dado em outro. Em Java, essa conversão pode ser:
 
-> *Implícita (automática):* Quando não há perda de dados.
+> **Implícita (automática):** Quando não há perda de dados.
 
-> *Explícita (manual):* Quando há possibilidade de perda de dados ou quando se converte de um tipo maior para um tipo menor.
+> **Explícita (manual):** Quando há possibilidade de perda de dados ou quando se converte de um tipo maior para um tipo menor.
 
-#### Exemplos de Conversão Implícita
+#### Exemplos de Conversão implícita
 ```java
 int numeroInteiro = 10;
 double numeroDecimal = numeroInteiro; // Conversão implícita de int para double
 System.out.println(numeroDecimal); // Saída: 10.0
 ```
+Casting implícitos são automáticos, sem a necessidade do programador fazê-lo, como no exemplo acima. 
+
+
 #### Conversão Explícita (Casting Manual)
+
+> Escrever um programa em Java que leia quatro números inteiros, calcule e mostra a média entre eles, sem casting explícito.
+
+> Adicionar casting explícito. 
+
+> Tente atribuir um *double* a uma variável inteira e a uma variável *float*, sem casting explícito. Isso resultará em erro.
+
+> Observe o exemplo a seguir:
+
 ```java
 double valorDecimal = 9.7;
 int valorInteiro = (int) valorDecimal; // Casting explícito
 System.out.println(valorInteiro); // Saída: 9 (parte decimal é descartada)
 ```
+Em casting explícito, um valor não é arredondado; ele é "truncado".
 
 > ⚠️ *Atenção:* Ao converter de double para int, a parte fracionária é perdida!
 
 
+#### Tabela de castings possíveis
+
+| Para: | byte | sort | char | int | long | float | double |
+| De:   |      |      |      |     |      |       |        |
+|----------|----------|--------|--------|-------|--------|---------|---------|
+| byte     | -        | impl.  | (char) | impl. | impl.  | impl.   | impl.   |
+| sort     | (byte)   | -      | (char) | impl. | impl.  | impl.   | impl.   |
+| char     | (byte)   | (sort) | -      | impl. | impl.  | impl.   | impl.   |
+| int      | (byte)   | (sort) | (char) | -     | impl.  | impl.   | impl.   |
+| long     | (byte)   | (sort) | (char) | (int) | -      | impl.   | impl.   |
+| float    | (byte)   | (sort) | (char) | (int) | (long) | -       | impl.   |
+| double   | (byte)   | (sort) | (char) | (int) | (long) | (float) | impl.   |
+
+
+---
 ## 📝 Exercícios de Fixação
 
 > Exercícios sobre estrutura sequencial: entrada, processamento e saída.
-
----
 
 ### Exercício 01
 
