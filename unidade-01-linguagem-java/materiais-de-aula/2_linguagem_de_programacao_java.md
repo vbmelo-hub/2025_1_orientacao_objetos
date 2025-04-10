@@ -3,8 +3,8 @@
 ## 📑 Sumário
 
 - [Iniciar](#️-iniciar)
-- [⚙️ Configuração do ambiente de desenvolvimento](#️-configuração-do-ambiente-de-desenvolvimento)
-- [👩🏻‍💻 Primeiro programa em Java](#-primeiro-programa-em-java)
+  - [⚙️ Configuração do ambiente de desenvolvimento](#️-configuração-do-ambiente-de-desenvolvimento)
+  - [👩🏻‍💻 Primeiro programa em Java](#-primeiro-programa-em-java)
 - [Estrutura Sequencial](#estrutura-sequencial)
 - [☕ 1. Introdução à sintaxe Java](#-1-introdução-à-sintaxe-java)
   - [🎯 Objetivo](#-objetivo)
@@ -25,16 +25,6 @@
   - [Conversão Explícita (Casting Manual)](#conversão-explícita-casting-manual)
   - [Tabela de Castings Possíveis](#tabela-de-castings-possíveis)
 - [📝 5. Exercícios de Fixação](#-5-exercícios-de-fixação)
-  - [Exercício 00](#exercício-00)
-  - [Exercício 01](#exercício-01)
-  - [Exercício 02](#exercício-02)
-  - [Exercício 03](#exercício-03)
-  - [Exercício 04](#exercício-04)
-  - [Exercício 05](#exercício-05)
-  - [Exercício 06](#exercício-06)
-  - [Exercício 07](#exercício-07)
-  - [Exercício 08](#exercício-08)
-  - [Exercício 09](#exercício-09)
 
 ---
 
