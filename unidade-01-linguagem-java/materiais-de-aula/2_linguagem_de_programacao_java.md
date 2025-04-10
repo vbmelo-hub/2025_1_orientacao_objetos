@@ -129,7 +129,8 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 - System.out.printf.
 - System.err.println.
 
-⚠️ Com System.out.printf, o uso da vírgula ou do ponto para indicar casas decimais depende da configuração de região do computador. É possível alterar isso diretamente no código com a classe Locale.
+⚠️ *Com System.out.printf, o uso da vírgula ou do ponto para indicar casas decimais depende da configuração de região do computador. É possível alterar isso diretamente no código com a classe Locale.*
+
 ---
 
 ## 3. Operadores Aritméticos
