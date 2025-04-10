@@ -91,7 +91,6 @@ class MeuPrograma {
 ### 🎯 Objetivo: 
   Apresentar a estrutura básica de um programa Java e os conceitos fundamentais.
 
-
 ### Estrutura Básica
 - Declaração de classes e métodos.
 - Método `main` como ponto de entrada.
@@ -126,10 +125,10 @@ class MeuPrograma {
 ### 🎯 Objetivo:
 Ensinar como interagir com o usuário, receber dados e exibir informações.
 
-### Entrada: classe Scanner e variável in da classe System
+### Entrada: classe Scanner e variável estática in da classe System
 - Importar e utilizar a classe `Scanner` para obter entrada do usuário.
 
-### Saída: variáveis out e err da classe System
+### Saída: variáveis estáticas out e err da classe System
 - System.out.println.
 - System.out.print.
 - System.out.printf.
