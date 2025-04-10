@@ -2,7 +2,6 @@
 
 >> 📅 Terça-feira, 8/4/2025 
 
----
 
 ## ⚙️ Configuração do ambiente de desenvolvimento
 
@@ -45,7 +44,43 @@ class MeuPrograma {
 }
 ```
 
-> *Experiemente mudar o conteúdo da mensagem. Também, troque println por print e por printf.* 
+> *Experimente mudar o conteúdo da mensagem. Também, troque println por print e por printf.* 
+
+---
+---
+
+## 📑 Sumário
+
+- [# Estrutura Sequencial](#estrutura-sequencial)
+- [☕ 1. Introdução à sintaxe Java](#-1-introdução-à-sintaxe-java)
+  - [🎯 Objetivo](#-objetivo)
+  - [Estrutura Básica](#estrutura-básica)
+  - [Variáveis e Tipos de Dados](#variáveis-e-tipos-de-dados)
+  - [Exemplo Prático](#exemplo-prático)
+- [2. Entrada e saída em Java](#2-entrada-e-saída-em-java)
+  - [🎯 Objetivo](#-objetivo-1)
+  - [Entrada: classe Scanner](#entrada-classe-scanner-e-variável-in-da-classe-system)
+  - [Saída: System.out e System.err](#saída-variáveis-out-e-err-da-classe-system)
+- [3. Operadores Aritméticos](#3-operadores-aritméticos)
+  - [🎯Objetivo](#objetivo)
+  - [Operadores Disponíveis](#operadores-disponíveis)
+  - [Exemplos Práticos](#exemplos-práticos)
+- [4. Casting de Dados](#4-casting-de-dados)
+  - [O que é Casting?](#o-que-é-casting)
+  - [Exemplos de Conversão Implícita](#exemplos-de-conversão-implícita)
+  - [Conversão Explícita (Casting Manual)](#conversão-explícita-casting-manual)
+  - [Tabela de Castings Possíveis](#tabela-de-castings-possíveis)
+- [📝 5. Exercícios de Fixação](#-5-exercícios-de-fixação)
+  - [Exercício 00](#exercício-00)
+  - [Exercício 01](#exercício-01)
+  - [Exercício 02](#exercício-02)
+  - [Exercício 03](#exercício-03)
+  - [Exercício 04](#exercício-04)
+  - [Exercício 05](#exercício-05)
+  - [Exercício 06](#exercício-06)
+  - [Exercício 07](#exercício-07)
+  - [Exercício 08](#exercício-08)
+  - [Exercício 09](#exercício-09)
 
 ---
 
@@ -57,14 +92,11 @@ class MeuPrograma {
   Apresentar a estrutura básica de um programa Java e os conceitos fundamentais.
 
 
----
-
 ### Estrutura Básica
 - Declaração de classes e métodos.
 - Método `main` como ponto de entrada.
 - Saída em Java com System.out.println.
 
----
 
 ### Variáveis e Tipos de Dados
 - Tipos primitivos: `int`, `double`, `char`, `boolean`.
@@ -88,9 +120,8 @@ class MeuPrograma {
 
 ---
 
+## 2. Entrada e saída em Java
 >> 📅 Terça-feira, 8/4/2025 
-
-## Entrada e saída em Java
 
 ### 🎯 Objetivo:
 Ensinar como interagir com o usuário, receber dados e exibir informações.
@@ -107,9 +138,9 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 ⚠️ Com System.out.printf, o uso da vírgula ou do ponto para indicar casas decimais depende da configuração de região do computador. É possível alterar isso diretamente no código com a classe Locale.
 ---
 
-## Operadores Aritméticos
+## 3. Operadores Aritméticos
 
-### Objetivo  
+### 🎯 Objetivo  
 Apresentar os operadores aritméticos básicos da linguagem Java e como utilizá-los em expressões matemáticas.
 
 ### Operadores Disponíveis
@@ -143,19 +174,8 @@ Apresentar os operadores aritméticos básicos da linguagem Java e como utilizá
 
 ---
 
-### Exercícios
-  
-- Escrever um programa que mostre o nome de uma pessoa e sua idade em 31 de dezembro de um determinado ano. Para isso, leia o nome da pessoa, seu ano de nascimento e o ano para o qual deseje calcular a idade.
 
-- Desenvolver um programa que pessa a base e altura de um triângulo e calcula a sua área.
-
-- Problema **Divisão do Tesouro (OBI)**:  
-  [https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/](https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/).
-
-
----
-
-## Casting de Dados
+## 4. Casting de Dados
 
 ### O que é Casting?
 Casting ou conversão de tipo é o processo de transformar um tipo de dado em outro. Em Java, essa conversão pode ser:
@@ -195,23 +215,32 @@ Em casting explícito, um valor não é arredondado; ele é "truncado".
 
 #### Tabela de castings possíveis
 
-| De ⬇️ Para ➡️ | byte     | sort   | char   | int   | long   | float   | double  |
+| De ⬇️ Para ➡️ | byte     | short   | char   | int   | long   | float   | double  |
 |----------|----------|--------|--------|-------|--------|---------|---------|
 | byte     | -        | impl.  | (char) | impl. | impl.  | impl.   | impl.   |
-| sort     | (byte)   | -      | (char) | impl. | impl.  | impl.   | impl.   |
-| char     | (byte)   | (sort) | -      | impl. | impl.  | impl.   | impl.   |
-| int      | (byte)   | (sort) | (char) | -     | impl.  | impl.   | impl.   |
-| long     | (byte)   | (sort) | (char) | (int) | -      | impl.   | impl.   |
-| float    | (byte)   | (sort) | (char) | (int) | (long) | -       | impl.   |
-| double   | (byte)   | (sort) | (char) | (int) | (long) | (float) | -    |
+| short     | (byte)   | -      | (char) | impl. | impl.  | impl.   | impl.   |
+| char     | (byte)   | (short) | -      | impl. | impl.  | impl.   | impl.   |
+| int      | (byte)   | (short) | (char) | -     | impl.  | impl.   | impl.   |
+| long     | (byte)   | (short) | (char) | (int) | -      | impl.   | impl.   |
+| float    | (byte)   | (short) | (char) | (int) | (long) | -       | impl.   |
+| double   | (byte)   | (short) | (char) | (int) | (long) | (float) | -    |
 
 
 ---
-## 📝 Exercícios de Fixação
+## 📝 5. Exercícios de Fixação
 
 > Exercícios sobre estrutura sequencial: entrada, processamento e saída.
 
+### Exercício 00
+  
+Escrever um programa que mostre o nome de uma pessoa e sua idade em 31 de dezembro de um determinado ano. Para isso, leia o nome da pessoa, seu ano de nascimento e o ano para o qual deseje calcular a idade.
+
 ### Exercício 01
+
+Desenvolver um programa que peça a base e altura de um triângulo e calcula a sua área.
+
+
+### Exercício 02
 
 Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma mensagem explicativa, conforme exemplos.
 
@@ -228,7 +257,7 @@ Saída:
 SOMA = 40
 ```
 
-### Exercício 02
+### Exercício 03
 
 Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com **quatro casas decimais** conforme exemplos.
 
@@ -247,7 +276,7 @@ Saída:
 A=12.5664
 ```
 
-### Exercício 03
+### Exercício 04
 
 Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto de A e B pelo produto de C e D segundo a fórmula:  
 `DIFERENCA = (A * B - C * D)`
@@ -267,7 +296,7 @@ Saída:
 DIFERENCA = -26
 ```
 
-### Exercício 04
+### Exercício 05
 
 Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por hora e calcule o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com **duas casas decimais**.
 
@@ -286,7 +315,7 @@ NUMBER = 25
 SALARY = U$ 550.00
 ```
 
-### Exercício 05
+### Exercício 06
 
 Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
 
@@ -304,7 +333,7 @@ VALOR A PAGAR: R$ 15.50
 ```
 
 
-### Exercício 06
+### Exercício 07
 
 Fazer um programa que leia três valores com ponto flutuante de dupla precisão: `A`, `B` e `C`. Em seguida, calcule e mostre:
 
@@ -329,3 +358,13 @@ TRAPEZIO: 18.200
 QUADRADO: 16.000  
 RETANGULO: 12.000
 ```
+
+## Exercício 08 
+
+Problema **Divisão do Tesouro (OBI)**:  
+  [https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/](https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/).
+
+## Exercício 09
+Problema **DPiso da escola (OBI)**:  
+  [https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/](https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/).
+
