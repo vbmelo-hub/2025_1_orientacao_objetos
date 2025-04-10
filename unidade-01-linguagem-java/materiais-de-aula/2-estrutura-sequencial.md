@@ -2,7 +2,7 @@
 
 ## 📑 Sumário
 
-- [⚙️ Configuração do ambiente de desenvolvimento](#-configuração-do-ambiente-de-desenvolvimento)
+- [⚙️ Configuração do ambiente de desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)
 - [👩🏻‍💻 Primeiro programa em Java](#-primeiro-programa-em-java)
 - [Estrutura Sequencial](#estrutura-sequencial)
 - [☕ 1. Introdução à sintaxe Java](#-1-introdução-à-sintaxe-java)
