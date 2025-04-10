@@ -1,57 +1,10 @@
-# ☕♨ Roteiro de aula: a linguagem de programação Java  
-
->> 📅 Terça-feira, 8/4/2025 
-
-
-## ⚙️ Configuração do ambiente de desenvolvimento
-
-> *Faça o download do Java Development Kit (JDK)* — 🔗 [Download do JDK](https://www.oracle.com/java/technologies/downloads);
-
-> *Descompacte o arquivo que contenha o diretório do JDK em um local de sua preferência (recomenda-se em C:\Program Files\Java*
-
-> *Configure as variáveis de ambiente*
-
-```plaintext
-1. Clique com o botão direito em "Este Computador" e vá em "Propriedades".
-2. Clique em "Configurações Avançadas do Sistema".
-3. Clique em "Variáveis de Ambiente".
-4. Em "Variáveis do Sistema", clique em "Novo".
-5. Nome: JAVA_HOME | Valor: C:\Program Files\Java\jdk-XX
-6. Clique em OK.
-7. Em "Variáveis de Ambiente", abra a variável Path e acrescente o caminho "%JAVA_HOME\bin%".
-8. Clique em OK.
-```
-
-> *Faça o download da IDE Eclipse* — 🔗 [Download do Eclipe](https://eclipseide.org);
-
-> *Descompacte o Eclipse em um local de sua preferência*
-
-> *Abra a ferramenta e configure a workspace*
-
-#### Você tem um ambiente de desenvolvimento Java configurado 
-
-
----
-
-## 👩🏻‍💻 Primeiro programa em Java
-
-> *Crie um arquivo com a extensão .java com o nome HelloWord e coloque este conteúdo:*
-```java
-class MeuPrograma {
-    public static void main(String[] args) {
-        System.out.println("Minha primeira aplicação Java!");
-    }
-}
-```
-
-> *Experimente mudar o conteúdo da mensagem. Também, troque println por print e por printf.* 
-
----
----
+# ☕♨ Roteiro de aula — Unidade Temática #1: Linguagem de Programação Java  
 
 ## 📑 Sumário
 
-- [# Estrutura Sequencial](#estrutura-sequencial)
+- [⚙️ Configuração do ambiente de desenvolvimento](#-configuraçao-do-ambiente-de-desenvolvimento)
+- [👩🏻‍💻 Primeiro programa em Java](#-primeiro-programa-em-java)
+- [Estrutura Sequencial](#estrutura-sequencial)
 - [☕ 1. Introdução à sintaxe Java](#-1-introdução-à-sintaxe-java)
   - [🎯 Objetivo](#-objetivo)
   - [Estrutura Básica](#estrutura-básica)
@@ -83,6 +36,56 @@ class MeuPrograma {
   - [Exercício 09](#exercício-09)
 
 ---
+
+
+>> 📅 Terça-feira, 8/4/2025 
+
+
+## ⚙️ Configuração do ambiente de desenvolvimento
+
+> *Faça o download do Java Development Kit (JDK)* — 🔗 [Download do JDK](https://www.oracle.com/java/technologies/downloads);
+
+> *Descompacte o arquivo que contenha o diretório do JDK em um local de sua preferência (recomenda-se em C:\Program Files\Java*
+
+> *Configure as variáveis de ambiente*
+
+```plaintext
+1. Clique com o botão direito em "Este Computador" e vá em "Propriedades".
+2. Clique em "Configurações Avançadas do Sistema".
+3. Clique em "Variáveis de Ambiente".
+4. Em "Variáveis do Sistema", clique em "Novo".
+5. Nome: JAVA_HOME | Valor: C:\Program Files\Java\jdk-XX
+6. Clique em OK.
+7. Em "Variáveis de Ambiente", abra a variável Path e acrescente o caminho "%JAVA_HOME\bin%".
+8. Clique em OK.
+```
+
+> *Faça o download da IDE Eclipse* — 🔗 [Download do Eclipe](https://eclipseide.org);
+
+> *Descompacte o Eclipse em um local de sua preferência*
+
+> *Abra a ferramenta e configure a workspace*
+
+#### Você tem um ambiente de desenvolvimento Java configurado 
+
+---
+
+## 👩🏻‍💻 Primeiro programa em Java
+
+> *Crie um arquivo com a extensão .java com o nome HelloWord e coloque este conteúdo:*
+```java
+class MeuPrograma {
+    public static void main(String[] args) {
+        System.out.println("Minha primeira aplicação Java!");
+    }
+}
+```
+
+> *Experimente mudar o conteúdo da mensagem. Também, troque println por print e por printf.* 
+
+---
+---
+
 
 # Estrutura Sequencial
 
