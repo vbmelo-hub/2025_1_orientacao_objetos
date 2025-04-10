@@ -2,6 +2,7 @@
 
 ## 📑 Sumário
 
+- [Iniciar](#️-iniciar)
 - [⚙️ Configuração do ambiente de desenvolvimento](#️-configuração-do-ambiente-de-desenvolvimento)
 - [👩🏻‍💻 Primeiro programa em Java](#-primeiro-programa-em-java)
 - [Estrutura Sequencial](#estrutura-sequencial)
@@ -40,6 +41,7 @@
 
 >> 📅 Terça-feira, 8/4/2025 
 
+# ▶️ Iniciar
 
 ## ⚙️ Configuração do ambiente de desenvolvimento
 
