@@ -83,7 +83,7 @@ class MeuPrograma {
 
 ## ☕ 1. Introdução à sintaxe Java
 
-### 🎯 Objetivo: 
+**🎯 Objetivo:** 
   Apresentar a estrutura básica de um programa Java e os conceitos fundamentais.
 
 ### Estrutura Básica
@@ -117,7 +117,7 @@ class MeuPrograma {
 ## 2. Entrada e saída em Java
 >> 📅 Terça-feira, 8/4/2025 
 
-### 🎯 Objetivo:
+**🎯 Objetivo:**
 Ensinar como interagir com o usuário, receber dados e exibir informações.
 
 ### Entrada: classe Scanner e variável estática in da classe System
@@ -135,7 +135,7 @@ Ensinar como interagir com o usuário, receber dados e exibir informações.
 
 ## 3. Operadores Aritméticos
 
-### 🎯 Objetivo  
+**🎯 Objetivo:**  
 Apresentar os operadores aritméticos básicos da linguagem Java e como utilizá-los em expressões matemáticas.
 
 ### Operadores Disponíveis
@@ -367,7 +367,7 @@ Problema **DPiso da escola (OBI)**:
 
 # 🔀 Desvios Condicionais
 
-### 🎯 Objetivo
+**🎯 Objetivo:**
 Apresentar as estruturas de decisão da linguagem Java, permitindo que o programa tome diferentes caminhos com base em condições lógicas.
 
 
@@ -487,10 +487,9 @@ switch (dia) {
 
  # 🔁 Laços de Repetição
 
- **🎯 Objetivo**
+ **🎯 Objetivo:**
 Apresentar as estruturas de repetição em Java: `while`, `do/while` e `for`, explicando sua sintaxe, funcionamento e diferenças, com exemplos práticos.
 
----
 
 ### 🔄 1. Laço `while`
 
@@ -586,7 +585,7 @@ for (int contador = 1; contador <= 5; contador++) {
 
 # 🧮 Estruturas de Dados: Vetores, Listas e Mapas
 
-**🎯 Objetivo**
+**🎯 Objetivo:**
 Apresentar as principais estruturas de dados em Java: vetores, listas (`ArrayList`) e mapas (`HashMap`), além de introduzir o laço `for-each` como forma prática de percorrê-las.
 
 ## 📦 1. Vetores (Arrays)
