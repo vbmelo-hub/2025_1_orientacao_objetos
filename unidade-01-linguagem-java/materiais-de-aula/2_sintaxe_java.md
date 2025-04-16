@@ -363,3 +363,126 @@ Problema **Divisão do Tesouro (OBI)**:
 Problema **DPiso da escola (OBI)**:  
   [https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/](https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/).
 
+---
+
+# 🔀 Desvios Condicionais
+
+### 🎯 Objetivo
+Apresentar as estruturas de decisão da linguagem Java, permitindo que o programa tome diferentes caminhos com base em condições lógicas.
+
+
+## 🧱 1. Estrutura do `if`, `else if` e `else`
+
+```java
+if (condição) {
+    // bloco executado se condição for verdadeira
+} else if (outraCondição) {
+    // bloco executado se a outraCondição for verdadeira
+} else {
+    // bloco executado se nenhuma das condições for verdadeira
+}
+```
+### Exemplo
+
+```java
+int idade = 18;
+
+if (idade < 18) {
+    System.out.println("Menor de idade");
+} else if (idade == 18) {
+    System.out.println("Tem exatamente 18 anos");
+} else {
+    System.out.println("Maior de idade");
+}
+```
+
+### Operadores Relacionais
+
+| Operador | Significado      | Exemplo (a = 5, b = 10)| 
+|----------|------------------|------------------------|
+| `==`     | Igual a          | `a == b` → false       |
+| `!=`     | Diferente de     | `a != b` → true        |
+| `>`      | Maior que        | `b > a`  → true        |
+| `<`      | Menor que        | `a < b`  → true        |
+| `>=`     | Maior ou igual a | `a >= b` → false       |
+| `<=`     | Menor ou igual a | `a <= b` → true 
+
+
+### 🔁 Encadeamento de condições
+
+> É possível encadear várias condições usando os **operadores lógicos**:
+
+- && (E lógico)
+
+- || (OU lógico)
+
+- ! (NÃO lógico)
+
+```java
+if (idade >= 18 && idade <= 65) {
+    System.out.println("Adulto em idade ativa");
+}
+```
+
+---
+
+## 📦 2. Estrutura switch
+
+Boa alternativa ao if-else quando temos várias comparações simples com o mesmo valor. É necessário que o resultado da comparação não seja um intervalo, mas sim em um valor específico. 
+
+### Exemplo
+```java
+int dia = 3;
+
+switch (dia) {
+    case 1:
+        System.out.println("Domingo");
+        break;
+    case 2:
+        System.out.println("Segunda-feira");
+        break;
+    case 3:
+        System.out.println("Terça-feira");
+        break;
+    case 4:
+        System.out.println("Quarta-feira");
+        break;
+    case 5:
+        System.out.println("Quinta-feira");
+        break;
+    case 6:
+        System.out.println("Sexta-feira");
+        break;
+    case 7:
+        System.out.println("Sábado-feira");
+        break;
+    default:
+        System.out.println("Dia inválido");
+}
+```
+
+--
+
+## 📝 3. Exercícios de Fixação
+
+- Ler a idade de uma pessoa e exibir:
+
+ - "Menor de idade" se for menor que 18;
+
+ - "Maior de idade" caso contrário.
+
+- Receber um número de 1 a 7 e imprimir o dia da semana correspondente utilizando switch.
+
+- Escrever um programa que lê dois números inteiros e imprime o maior entre eles.
+
+- Criar um programa que recebe três notas, calcula a média e imprime:
+
+ - "Aprovado" se média ≥ 7,
+
+ - "Recuperação" se média entre 5 e 7,
+
+ - "Reprovado" caso contrário.
+
+ ---
+
+ 
