@@ -667,8 +667,8 @@ System.out.println("Idade de Ana: " + idades.get("Ana"));
 
 **Usando for-each (chaves):**
 ```java
-for (String i : idades.entrySet()) {
-    System.out.println(i + " → " + entrada.getValue());
+for (String i : idades.keySet()) {
+    System.out.println(i + " → " + entrada.get(i));
 }
 
 ```
