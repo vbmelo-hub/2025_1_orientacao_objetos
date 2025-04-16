@@ -461,7 +461,7 @@ switch (dia) {
 }
 ```
 
---
+---
 
 ## 📝 3. Exercícios de Fixação
 
@@ -485,4 +485,216 @@ switch (dia) {
 
  ---
 
- 
+ # 🔁 Laços de Repetição
+
+ **🎯 Objetivo**
+Apresentar as estruturas de repetição em Java: `while`, `do/while` e `for`, explicando sua sintaxe, funcionamento e diferenças, com exemplos práticos.
+
+---
+
+### 🔄 1. Laço `while`
+
+O laço `while` executa um bloco de código **enquanto** uma condição for verdadeira. A **verificação ocorre antes da execução**.
+
+#### Sintaxe:
+```java
+while (condição) {
+    // bloco de código
+}
+```
+
+### Exemplo
+
+```java
+int contador = 1;
+
+while (contador <= 5) {
+    System.out.println("Contando: " + contador);
+    contador++;
+}
+```
+>> 📌 O bloco será executado enquanto contador <= 5 for verdadeiro.
+>> 🛑 Se a condição for falsa no início, o laço não será executado nenhuma vez.
+
+### Prática
+> Escreva um programa em Java que leia uma quantidade indeterminada pesos de bois de uma fazenda. Quando for lido o valor 0 (zero), a leitura deve ser encerrada e os valores do boi mais pesado, mais leve e a média de massa dos dois devem ser apresentados.
+
+---
+
+## 🔁 2. Laço do/while
+
+O laço do/while executa o bloco de código pelo menos uma vez, e verifica a condição depois. 
+
+#### Sintaxe:
+```java
+do {
+    // bloco de código
+} while (condição);
+```
+
+### Exemplo
+
+```java
+for (int contador = 1; contador <= 5; contador++) {
+    System.out.println("Contando: " + contador);
+}
+```
+>> ✅ O laço sempre executa ao menos uma vez, mesmo que a condição seja falsa logo após a primeira execução.
+
+### Prática
+> Escrever um programa em Java que leia uma quantidade indefinida de números inteiros. Para cada número lido, indicar o dia da semana correspondente, se houver. Senão, indicar isso através de uma mensagem de valor inválido. Caso o usuário digite 0, a aplicação será encerrada. Usar o labelled loop. 
+
+---
+
+### 🔄 3. Laço `for`
+
+O laço for é usado quando sabemos exatamente quantas vezes queremos repetir algo. É muito comum para contagens e percursos em sequências.
+
+#### Sintaxe:
+```java
+for (inicialização; condição; atualização) {
+    // bloco de código
+}
+```
+
+**Exemplo**
+
+```java
+for (int contador = 1; contador <= 5; contador++) {
+    System.out.println("Contando: " + contador);
+}
+```
+>> 📌 Útil para quando o número de repetições é conhecido de antemão.
+
+### Prática
+> Escrever um programa em Java que mostre os números pares entre 0 e 100.
+> Modifique o programa anterior para interromper a execução quando encontrar um número múltiplo de 19.
+> Modifique o programa para mostrar os números pares, desde que não sejam múltiplos de 7. 
+
+---
+
+📝 4. Exercícios Práticos
+- Imprimir os números de 1 a 10 usando while, do/while e for.
+
+- Ler um número inteiro n e imprimir todos os números pares de 1 até n.
+
+- Criar um programa que peça ao usuário para digitar senhas até que a senha correta seja informada.
+
+- Fazer um programa que leia 5 números inteiros e calcule a média deles usando um laço.
+
+---
+
+# 🧮 Estruturas de Dados: Vetores, Listas e Mapas
+
+**🎯 Objetivo**
+Apresentar as principais estruturas de dados em Java: vetores, listas (`ArrayList`) e mapas (`HashMap`), além de introduzir o laço `for-each` como forma prática de percorrê-las.
+
+## 📦 1. Vetores (Arrays)
+
+Um **vetor** é uma estrutura fixa de dados do mesmo tipo. Em Java, deve-se declarar o tamanho ao criar o vetor.
+
+#### Declaração e uso:
+```java
+int[] numeros = new int[5]; // vetor com 5 posições
+
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+numeros[3] = 40;
+numeros[4] = 50;
+
+for (int i = 0; i < numeros.length; i++) {
+    System.out.println(numeros[i]);
+}
+```
+**Usando for-each:**
+```java
+for (int numero : numeros) {
+    System.out.println(numero);
+}
+```
+>> 📌 O for-each é útil para percorrer todos os elementos, mas não permite modificar valores diretamente pelo índice.
+
+---
+
+## 📋 2. Listas: ArrayList
+Ao contrário dos vetores, as listas (como ArrayList) crescem dinamicamente. Estão disponíveis na biblioteca java.util.
+
+### Exemplo com ArrayList<String>:
+```java
+import java.util.ArrayList;
+
+ArrayList<String> nomes = new ArrayList<>();
+
+nomes.add("Ana");
+nomes.add("Carlos");
+nomes.add("João");
+
+for (String nome : nomes) {
+    System.out.println(nome);
+}
+```
+
+### Opções comuns
+- nomes.get(x);           // Mostra o valor do elemento do índice x
+- nomes.size();           // Mostra o tamanho da lista
+- nomes.contains("Ana");  // Verifica se a lista contém o nome Ana
+- nomes.remove(2);        // Remove o elemento que está no índice 2, se houver
+- nomes.add(Maria);       // Adiciona Maria na última posição
+- nomes.add(0, "Pedro");  // Adiciona Pedro ao índice 0 e faz os outros elementos pularesm uma casa. 
+- nomes.set(1, "Sávio");  // Substitui o valor do índice 1 por Sávio
+- nomes.clear()           // Limpa a lista
+
+
+---
+## 🗂️ 3. Mapas: HashMap
+Um mapa armazena pares chave → valor. Usado quando queremos associar identificadores únicos a valores.
+
+#### Declaração e uso:
+```java
+import java.util.HashMap;
+
+HashMap<String, Integer> idades = new HashMap<>();
+
+idades.put("Ana", 25);
+idades.put("Carlos", 30);
+idades.put("João", 28);
+
+System.out.println("Idade de Ana: " + idades.get("Ana"));
+
+```
+🔒 As chaves são únicas. Se usar put com uma chave já existente, o valor anterior será substituído.
+
+
+**Usando for-each (chaves):**
+```java
+for (String i : idades.entrySet()) {
+    System.out.println(i + " → " + entrada.getValue());
+}
+
+```
+
+**Usando for-each (valores):**
+```java
+for (int i : idades.values()) {
+    System.out.println(i);
+}
+
+```
+### Opções comuns
+- idades.put("Pedro", 50);           // Define o valor 50 para a chave Pedro
+- idades.get("Ana");                 // Mostra o valor contido na chave Ana
+- idades.remove("Ana");              // Remove a chave (e o valor) contido em Ana
+- idades.clear();                    // Limpa o mapa
+- idades.size();                     // Mostra o tamanho atual do mapa
+- idades.
+
+---
+### 📝 4. Exercícios Práticos
+- Criar um vetor de inteiros com 10 posições e preencher com valores digitados pelo usuário. Mostrar a média dos valores.
+
+- Criar uma lista de nomes de alunos. Adicionar nomes, exibir todos com for-each e verificar se um nome existe usando .contains().
+
+- Criar um mapa nome → idade, permitindo cadastrar e exibir os pares inseridos.
+
+- Modifique o exemplo do HashMap para que o usuário digite os dados via teclado.
