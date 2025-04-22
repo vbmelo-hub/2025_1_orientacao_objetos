@@ -360,7 +360,7 @@ Problema **Divisão do Tesouro (OBI)**:
   [https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/](https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/).
 
 ## Exercício 09
-Problema **DPiso da escola (OBI)**:  
+Problema **Piso da escola (OBI)**:  
   [https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/](https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/).
 
 ---
