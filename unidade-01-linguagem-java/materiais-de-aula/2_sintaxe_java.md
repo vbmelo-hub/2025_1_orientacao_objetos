@@ -477,11 +477,11 @@ switch (dia) {
 
 - Criar um programa que recebe três notas, calcula a média e imprime:
 
- - "Aprovado" se média ≥ 7,
+  - "Aprovado" se média ≥ 7,
 
- - "Recuperação" se média entre 5 e 7,
+  - "Recuperação" se média entre 5 e 7,
 
- - "Reprovado" caso contrário.
+  - "Reprovado" caso contrário.
 
  ---
 
