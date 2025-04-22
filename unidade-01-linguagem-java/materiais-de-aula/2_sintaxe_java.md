@@ -467,9 +467,9 @@ switch (dia) {
 
 - Ler a idade de uma pessoa e exibir:
 
- -- "Menor de idade" se for menor que 18;
+ - "Menor de idade" se for menor que 18;
 
- -- "Maior de idade" caso contrário.
+ - "Maior de idade" caso contrário.
 
 - Receber um número de 1 a 7 e imprimir o dia da semana correspondente utilizando switch.
 
@@ -513,6 +513,7 @@ while (contador <= 5) {
 }
 ```
 >> 📌 O bloco será executado enquanto contador <= 5 for verdadeiro.
+
 >> 🛑 Se a condição for falsa no início, o laço não será executado nenhuma vez.
 
 ### Prática
