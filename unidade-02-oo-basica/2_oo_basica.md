@@ -55,14 +55,14 @@ System.out.println(porta1.largura); //Mostra a largura da porta
 🎯**Objetivo:**
  Abstrair o conceito de conta bancária e criar o tipo que o represente.
 
-Mapeamento de:
+**Mapeamento de:**
 - Atributos (quais os seus tipos?)
 - Métodos (quais os seus tipos?)
 
-UML:
+**UML:**
 - Produzir o diagrama de classe, com atributos e métodos.
 
-Codificação:
+**Codificação:**
 - Criar um projeto chamado banco e um classe de modelo que represente as contas;
 - Criação de instâncias de objetos conta e referências as essas instâncias;
 - Atribuição e recuperação valores de atributos;
