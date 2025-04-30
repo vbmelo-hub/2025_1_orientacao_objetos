@@ -1,0 +1,76 @@
+# ☕♨ Roteiro de aula — Unidade Temática #2: Orientação a objetos básica  
+
+
+
+>> 📅 Quarta-feira, 30/4/2025
+
+## Criação de um tipo
+
+>> Quando definimos uma classe, com atributos e métodos, dizemos que definimos um tipo de dados derivado. 
+
+## O exemplo de Porta
+
+🎯**Objetivo:**
+ Abstrair o conceito de porta e criar o tipo que o represente esse tipo de objeto.
+
+**Crie uma porta. Para isso, responda as questões:** 
+- Quais são os atributos necessário para a criação dessa classe?
+- Quais são os métodos necessários para a criação dessa classe?
+- Modele, em UML, essa classe.
+- Com base no modelo apresentado acima, implemente em Java a classe Porta. 
+
+A classe Porta criada representa um tipo derivado de dados. Assim como outro tipo derivado, como Scanner ou String, Porta tem atributos e métodos — esses foram definidos na criação da classe. 
+
+Diferentemente das classes usadas na unidade anterior (sintaxe Java), a classe Porta não contém (e não deve conter) o método main. Isso se dá em razão do fato de Porta ser uma classe "modelo", ou seja, especifica um tipo, um conjunto de similaridades de portas reais.
+
+Para que seja possível o uso de Porta, ou seja, a criação de instâncias que representem as portas reais (que são os objetos de fato), faz-se necessário criar outra classe, esta com o método main. Essa classe, de fato, será responsável pela criação, manipulação e uso de instâncias de Porta. Para fins de teste, ela também terá como responsabilidade a interação do usuário com o programa. 
+
+- Implemente uma classe clamada **Aplicacao** no mesmo projeto de Porta;
+- Dentro do método main de Aplicacao, crie uma variavel do tipo Porta;
+- Faça esse atributo receber a instância que represente um objeto de Porta;
+- Defina valores para os atributos da instância de porta criada;
+- Chame ações (métodos) de uma porta;
+- Mostre informações da porta criada.
+
+```java
+Porta porta1; //Cria uma variável do tipo porta
+
+new Porta(); 
+/*Cria uma nova instância, 
+ou seja, a representação de um novo objeto de Porta.
+Essa abordagem, entretanto não guarda a referência à porta criada*/
+
+porta1 = new Porta; //Cria uma nova porta e faz porta1 apontar para essa porta criada
+
+porta1.cor = "Preta" //Define o valor do atributo cor da porta criada
+
+porta1.fechar(); //Invoca o método fechar da instância de porta
+
+System.out.println(porta1.largura); //Mostra a largura da porta
+```
+> Diferenças de objetos: porta1 != porta2, mesmo que ambos os objetos tenham o mesmo estado. 
+
+### Sistema bancário/criação de contas
+
+🎯**Objetivo:**
+ Abstrair o conceito de conta bancária e criar o tipo que o represente.
+
+Mapeamento de:
+- Atributos (quais os seus tipos?)
+- Métodos (quais os seus tipos?)
+
+UML:
+- Produzir o diagrama de classe, com atributos e métodos.
+
+Codificação:
+- Criar um projeto chamado banco e um classe de modelo que represente as contas;
+- Criação de instâncias de objetos conta e referências as essas instâncias;
+- Atribuição e recuperação valores de atributos;
+- Invocação de métodos.
+
+📝**Exercícios:**
+- Implementar um sistema de biblioteca, com as classes Livro, Autor e Editora;
+- Definir os atributos e métodos das classes;
+- Modelar as classes em UML;
+- Implementar a classe em Java.
+
