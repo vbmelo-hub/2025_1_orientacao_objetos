@@ -1,6 +1,4 @@
-# ☕♨ Roteiro de aula — Unidade Temática #2: Orientação a objetos básica  
-
-
+# ☕👩🏽‍💻 Roteiro de aula — Unidade Temática #2: Orientação a objetos básica  
 
 >> 📅 Quarta-feira, 30/4/2025
 
