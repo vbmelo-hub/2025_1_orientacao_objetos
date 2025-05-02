@@ -17,7 +17,20 @@
 - Modele, em UML, essa classe.
 - Com base no modelo apresentado acima, implemente em Java a classe Porta. 
 
-A classe Porta criada representa um tipo derivado de dados. Assim como outro tipo derivado, como Scanner ou String, Porta tem atributos e métodos — esses foram definidos na criação da classe. 
+**Atributos ou caracaterísticas da classe Porta:**
+
+É fácil perceber que uma porta, independentemente do seu tipo, tem atributos como largura, altura e espessura, do tipo numérico; cor e material, do tipo textual (String). Ainda, podemos considerar um atributo para fechadura, também do tipo textual. Por último, atributos para indicar os estados da porta, ou seja, fechada ou aberta e trancada ou destrancada, podem ser levantados. Nesse caso, o tipo lógico (boolean) é o mais indicado. Obviamente, outros atributos podem ser levantados para uma porta, mas assumiremos esse nível de abstração.
+
+É fácil perceber que abrir, fechar, trancar e destrancar são operações feitas em uma porta, ou seja, são seus métodos (consideramos aqui o fechar como encostrar uma porta, sem trancá-la). Para que seja possível trancar ou destrancar uma porta, é necessário usar a chave adequada para isso; portanto, os métodos que representam essas ações exigem têm chave como parâmetro (vamos abstrair a chave como um texto). Os métodos fechar e abrir não exigem parâmetros. Por fim, os quatro métodos devem retornar um valor lógico indicando se foi possível realizá-lo ou não. 
+
+A classe em UML está apresentada na imagem abaixo:
+
+![Classe Porta, diagrama UML](\classe_uml_porta)
+
+
+**Criação da classe em Java:**
+
+A classe Porta pode ser criada em uma linguagem de programação, como em Java, e representará um tipo derivado de dados. Assim como outro tipo derivado, como Scanner ou String, Porta tem atributos e métodos — esses foram definidos na criação da classe. 
 
 Diferentemente das classes usadas na unidade anterior (sintaxe Java), a classe Porta não contém (e não deve conter) o método main. Isso se dá em razão do fato de Porta ser uma classe "modelo", ou seja, especifica um tipo, um conjunto de similaridades de portas reais.
 
