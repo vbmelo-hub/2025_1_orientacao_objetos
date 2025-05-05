@@ -70,6 +70,66 @@ Quando um programador declara uma variável, como int, double ou char, é reserv
 
 > Por isso, variáveis que apontam para instâncias de objetos diferentes, mesmo que ambos os objetos tenham o mesmo estado, são diferentes. Teste criar dois objetos, porta1 e porta2, com os mesmos valores para seus atributos e depois comparece se porta1 == porta2. O resultado dessa comparação será _false_, pois as duas variáveis apontam para endereços de memória na área de heap distintas.
 
+**Implementação dos métodos de Porta e teste de execução:**
+
+O modelo apresentado no diagrama de classes contém quatro métodos: abrir, fechar, destrancar e trancar. Os dois primeiros sem parâmetro, ao passo que os dois últimos têm uma chave, do tipo String, como parâmetro. Os quatro métodos retornam um valor lógico (boolean).
+
+- **Método abrir**: esse método verifica se a porta está destrancada e, em caso afirmativo, altera o valor da variável _estaFechada_ para falso e retornar verdadeiro. Caso contrário, retorna falso. Nesse exemplo, não se verifica se a porta já está aberta ou não mo momento da chamado do método — o que importa é o resultado final: a porta deve estar aberta, desde que não esteja trancada. O código é apresentado a seguir:
+```java
+	public boolean abrir() {
+		if(!estaTrancado) {
+			estaFechado = false;
+			return true;
+		}
+		return false;
+	}
+```
+- **Método fechar**: tem como responsabilidade definir o valor da variável _estaFechada_, como verdade. Não realiza nenhuma verificação adicional, nem há a possibilidade de retornar outro valor (ou seja, falso). Por esse motivo, o tipo de retorno foi alterado de _boolean_ para _void_. O código é o seguinte:
+```java
+	public void fechar() {
+		estaFechado = true;
+	}
+```
+
+- **Método destrancar**: esse método recebe uma chave como parâmetro e a compara com o valor da chave da porta, que é assumido como sendo "1234" (do tipo String). Caso a chave esteja correta, a porta é destrancada (variável _estaTrancada_ recebe o valor false) e o método retorna true. Também retorna true se a porta já estiver destrancada. O código é apresentado abaixo:
+```java
+	public boolean destrancar(String chave) {
+		if (chave.equals("1234") || !estaTrancado ) {
+			estaTrancado = false;
+			return true;
+		}
+		return false;
+	}
+```
+
+- **Método trancar**: recebe uma chave como parâmetro, que é comparada ao valor "1234". Em caso positivo, o método fechar() é invocado e a variável _estaTrancado_ recebe o valor true. Retorna true se a chave for correta; caso contrário, retorna false. Veja o código:
+```java
+	public boolean trancar(String chave) {
+		if(chave.equals("1234")) {
+			fechar();
+			estaTrancado = true;
+			return true;
+		}
+		return false;
+	}	
+```
+
+- **Método de relatório**: tem como finalidade retornar uma representação textual de todos os atributos do objeto, no formato String, conforme mostrado a seguir:
+```java
+	public String getRelatorio() {
+		String relatorio = "Altura: " + altura;
+		relatorio += "\nLargura: " + largura;
+		relatorio += "\nEspessura: " + espessura;
+		relatorio += "\nMaterial: " + material;
+		relatorio += "\nCor: " + cor;
+		relatorio += "\nFechadura: " + fechadura;
+		return relatorio;
+	}
+```
+
+É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura. Esta classe, por sua vez, deve compor a classe Porta. A figura abaixo ilustra essa situação.
+
+
 
 ### Sistema bancário/criação de contas
 
