@@ -127,7 +127,7 @@ O modelo apresentado no diagrama de classes contém quatro métodos: abrir, fech
 	}
 ```
 
-É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura. Esta classe, por sua vez, deve compor a classe Porta. A figura abaixo ilustra essa situação.
+É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura. A relação entre as classes Fechadura e Porta deve ser de composição, em que uma fechadura deve compor uma porta. A figura abaixo ilustra essa situação.
 
 
 
