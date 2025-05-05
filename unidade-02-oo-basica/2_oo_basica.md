@@ -21,7 +21,7 @@
 
 É fácil perceber que uma porta, independentemente do seu tipo, tem atributos como largura, altura e espessura, do tipo numérico; cor e material, do tipo textual (String). Ainda, podemos considerar um atributo para fechadura, também do tipo textual. Por último, atributos para indicar os estados da porta, ou seja, fechada ou aberta e trancada ou destrancada, podem ser levantados. Nesse caso, o tipo lógico (boolean) é o mais indicado. Obviamente, outros atributos podem ser levantados para uma porta, mas assumiremos esse nível de abstração.
 
-É fácil perceber que abrir, fechar, trancar e destrancar são operações feitas em uma porta, ou seja, são seus métodos (consideramos aqui o fechar como encostrar uma porta, sem trancá-la). Para que seja possível trancar ou destrancar uma porta, é necessário usar a chave adequada para isso; portanto, os métodos que representam essas ações exigem têm chave como parâmetro (vamos abstrair a chave como um texto). Os métodos fechar e abrir não exigem parâmetros. Por fim, os quatro métodos devem retornar um valor lógico indicando se foi possível realizá-lo ou não. 
+É fácil perceber que abrir, fechar, trancar e destrancar são operações feitas em uma porta, ou seja, são seus métodos (consideramos aqui o fechar como encostar uma porta, sem trancá-la). Para que seja possível trancar ou destrancar uma porta, é necessário usar a chave adequada para isso; portanto, os métodos que representam essas ações exigem têm chave como parâmetro (vamos abstrair a chave como um texto). Os métodos fechar e abrir não exigem parâmetros. Por fim, os quatro métodos devem retornar um valor lógico indicando se foi possível realizá-lo ou não. 
 
 A classe em UML está apresentada na imagem abaixo:
 
@@ -39,7 +39,7 @@ Para que seja possível o uso de Porta, ou seja, a criação de instâncias que 
 >> 📅 Quarta-feira, 2/5/2025
 
 - Implemente uma classe clamada **Aplicacao** no mesmo projeto de Porta;
-- Dentro do método main de Aplicacao, crie uma variavel do tipo Porta;
+- Dentro do método main de Aplicacao, crie uma variável do tipo Porta;
 - Faça esse atributo receber a instância que represente um objeto de Porta;
 - Defina valores para os atributos da instância de porta criada;
 - Chame ações (métodos) de uma porta;
@@ -65,6 +65,8 @@ System.out.println(porta1.largura); //Mostra a largura da porta
 **Alocação de memória:**
 
 Quando um programador declara uma variável, como int, double ou char, é reservado um espaço na memória para aquela variável, na área de alocação estática (ou stack, pilha). Por outro lado, quando uma variável de um tipo de referência é declarada, por exemplo porta1 (do tipo Porta), é criada na stack essa variável, com o valor padrão _null_. Quando é atribuído a essa variável um valor que se refere a uma instância de Porta — por exemplo, quando se faz _porta1 = new Porta();_ —, uma nova área de memória é reservada para a instância de Porta criada, essa na área de alocação dinâmica (ou heap), e porta1 passa a ter o valor do endereço dessa referência. A imagem abaixo ilustra a situação descrita. 
+
+![Image](https://github.com/user-attachments/assets/da626d6d-24da-4b78-97d5-ce0d61b3059e)
 
 > Por isso, variáveis que apontam para instâncias de objetos diferentes, mesmo que ambos os objetos tenham o mesmo estado, são diferentes. Teste criar dois objetos, porta1 e porta2, com os mesmos valores para seus atributos e depois comparece se porta1 == porta2. O resultado dessa comparação será _false_, pois as duas variáveis apontam para endereços de memória na área de heap distintas.
 
