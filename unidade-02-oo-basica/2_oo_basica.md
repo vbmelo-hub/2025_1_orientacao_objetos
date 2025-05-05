@@ -25,8 +25,6 @@
 
 A classe em UML está apresentada na imagem abaixo:
 
-![Classe Porta, diagrama UML](https://github.com/prof-jpontes/2025_1_orientacao_objetos/blob/main/unidade-02-oo-basica/classe_uml_porta.png?raw=true)
-
 ![Image](https://github.com/user-attachments/assets/e0981ced-bd8c-4127-8616-d6d7e1a458f4)
 
 **Criação da classe em Java:**
