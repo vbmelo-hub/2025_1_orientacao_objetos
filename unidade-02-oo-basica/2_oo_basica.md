@@ -17,7 +17,7 @@
 - Modele, em UML, essa classe.
 - Com base no modelo apresentado acima, implemente em Java a classe Porta. 
 
-**Atributos ou caracaterísticas da classe Porta:**
+**Atributos ou características da classe Porta:**
 
 É fácil perceber que uma porta, independentemente do seu tipo, tem atributos como largura, altura e espessura, do tipo numérico; cor e material, do tipo textual (String). Ainda, podemos considerar um atributo para fechadura, também do tipo textual. Por último, atributos para indicar os estados da porta, ou seja, fechada ou aberta e trancada ou destrancada, podem ser levantados. Nesse caso, o tipo lógico (boolean) é o mais indicado. Obviamente, outros atributos podem ser levantados para uma porta, mas assumiremos esse nível de abstração.
 
@@ -27,6 +27,7 @@ A classe em UML está apresentada na imagem abaixo:
 
 ![Classe Porta, diagrama UML](https://github.com/prof-jpontes/2025_1_orientacao_objetos/blob/main/unidade-02-oo-basica/classe_uml_porta.png?raw=true)
 
+![Image](https://github.com/user-attachments/assets/e0981ced-bd8c-4127-8616-d6d7e1a458f4)
 
 **Criação da classe em Java:**
 
