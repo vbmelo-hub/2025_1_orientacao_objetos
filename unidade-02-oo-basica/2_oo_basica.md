@@ -25,7 +25,7 @@
 
 A classe em UML está apresentada na imagem abaixo:
 
-![Image](https://github.com/user-attachments/assets/e0981ced-bd8c-4127-8616-d6d7e1a458f4)
+![Image](https://github.com/user-attachments/assets/4f5d9d49-224f-4875-b18c-a5c2c2492231)
 
 
 **Criação da classe em Java:**
@@ -129,7 +129,7 @@ O modelo apresentado no diagrama de classes contém quatro métodos: abrir, fech
 
 É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura. Esta classe, por sua vez, deve compor a classe Porta. A figura abaixo ilustra essa situação.
 
-
+![Image](https://github.com/user-attachments/assets/63442ab4-6c14-4b05-8d5d-d9b94f382a90)
 
 ### Sistema bancário/criação de contas
 
