@@ -1,4 +1,4 @@
-# ☕♨ Roteiro de aula — Unidade Temática #1: Linguagem de Programação Java  
+# ☕♨ Unidade Temática #1: Linguagem de Programação Java  
 
 ## 📑 Sumário
 

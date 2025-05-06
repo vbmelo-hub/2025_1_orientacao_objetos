@@ -1,4 +1,4 @@
-# ☕👩🏽‍💻 Roteiro de aula — Unidade Temática #2: Orientação a objetos básica  
+# ☕👩🏽‍💻 Unidade Temática #2: Orientação a objetos básica  
 
 >> 📅 Quarta-feira, 30/4/2025
 
@@ -7,6 +7,8 @@
 >> Quando definimos uma classe, com atributos e métodos, dizemos que definimos um tipo de dados derivado. 
 
 ## O exemplo de Porta
+
+> 👩🏽‍💻[Código-fonte disponível aqui!](https://github.com/prof-jpontes/2025_1_orientacao_objetos/tree/main/unidade-02-oo-basica/src-java/porta) Baixe o projeto e importe-o no seu IDE favorito (recomendo o Eclipse). 
 
 🎯**Objetivo:**
  Abstrair o conceito de porta e criar o tipo que o represente esse tipo de objeto.
@@ -127,13 +129,13 @@ O modelo apresentado no diagrama de classes contém quatro métodos: abrir, fech
 	}
 ```
 
->> 📅 Sexta-feira, 2/5/2025
+>> 📅 Quarta-feira, 7/5/2025
 
 É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido no mundo real (todas as portas teriam a mesma chave) nem em programação. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura.
 
 É fácil perceber um relacionamento forte entre as classes Porta e Fechadura. Veremos um pouco sobre os tipos de relacionamento, tomando como base os diagramas de classe em UML. 
 
-### UML: relacionamento entre classes
+## UML: relacionamento entre classes
 
 No diagrama de classes UML, as relações entre classes são fundamentais para representar como os objetos interagem e se organizam em um sistema. Três dos relacionamentos mais importantes são: associação, agregação e composição. 
 
@@ -170,13 +172,13 @@ O relacionamento entre as classes Fechadura e Porta é de composição porque:
 
 ➡ A fechadura não faz sentido existir isoladamente no sistema — ela está intrinsecamente ligada à porta. Quando uma porta é destruída, sua fechadura também é. Isso caracteriza uma composição: uma relação "parte/todo" forte, com dependência de vida. Esse modelo assume que a fechadura é construída junto com a porta e não é reutilizada em outra porta.
 
->> Representamos ainda com um atributo do tipo Fechadura na classe Porta. A figura abaixo ilustra essa composição. 
+> Representamos ainda com um atributo do tipo Fechadura na classe Porta. A figura abaixo ilustra essa composição. 
 
 ![Image](https://github.com/user-attachments/assets/c6e5cb8f-bb5f-4648-b909-9fbba6136dde)
 
 
 
-### Sistema bancário/criação de contas
+## Sistema bancário/criação de contas
 
 🎯**Objetivo:**
  Abstrair o conceito de conta bancária e criar o tipo que o represente.
