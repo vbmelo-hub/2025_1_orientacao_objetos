@@ -36,7 +36,7 @@ Diferentemente das classes usadas na unidade anterior (sintaxe Java), a classe P
 
 Para que seja possível o uso de Porta, ou seja, a criação de instâncias que representem as portas reais (que são os objetos de fato), faz-se necessário criar outra classe, esta com o método main. Essa classe, de fato, será responsável pela criação, manipulação e uso de instâncias de Porta. Para fins de teste, ela também terá como responsabilidade a interação do usuário com o programa. 
 
->> 📅 Quarta-feira, 2/5/2025
+>> 📅 Sexta-feira, 2/5/2025
 
 - Implemente uma classe clamada **Aplicacao** no mesmo projeto de Porta;
 - Dentro do método main de Aplicacao, crie uma variável do tipo Porta;
@@ -127,9 +127,54 @@ O modelo apresentado no diagrama de classes contém quatro métodos: abrir, fech
 	}
 ```
 
-É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura. A relação entre as classes Fechadura e Porta é de composição: uma fechadura compõe uma porta, ou seja, um atributo do tipo Fechadura está presente na classe Porta. A figura abaixo ilustra essa situação.
+>> 📅 Sexta-feira, 2/5/2025
 
-![Image](https://github.com/user-attachments/assets/63442ab4-6c14-4b05-8d5d-d9b94f382a90)
+É notável que o atributo fechadura, inicialmente definido como do tipo String, não tem muita função no sistema. Um fechadura, obviamente, não pode ser encarado como um simples texto, contendo, por exemplo, sua descrição. Assim, fechadura é um forte candidato a ser um tipo de dados, ou seja, uma classe. Ademais, Porta não tem, em sua especificação, um atributo chave, mas os métodos trancar e destrancar recebem, cada um, uma chave, e a comparação é com um valor textual definido no próprio corpo do método, o que não faz muito sentido no mundo real (todas as portas teriam a mesma chave) nem em programação. Para suprir essas dificuldades, chave pode ser um atributo da classe Fechadura.
+
+É fácil perceber um relacionamento forte entre as classes Porta e Fechadura. Veremos um pouco sobre os tipos de relacionamento, tomando como base os diagramas de classe em UML. 
+
+### UML: relacionamento entre classes
+
+No diagrama de classes UML, as relações entre classes são fundamentais para representar como os objetos interagem e se organizam em um sistema. Três dos relacionamentos mais importantes são: associação, agregação e composição. 
+
+**Associação**: é o relacionamento mais genérico entre classes. Ela indica que uma classe está conectada a outra, ou seja, objetos de uma classe podem referenciar objetos de outra.
+- É representada por uma linha simples entre as classes.
+- Pode ter multiplicidade (como 1, 0..1, \*, etc.) para indicar quantas instâncias estão envolvidas.
+- Também pode incluir um nome e o papel de cada classe.
+
+![Image](https://github.com/user-attachments/assets/37bf1b92-318f-48a4-a757-263b4eee5a94)
+
+➡ Um aluno pode estar matriculado em várias turmas, e cada turma pode ter vários alunos.
+
+
+**Agregação**: é um tipo especial de associação que indica uma relação "todo/parte". Nesse caso, o todo é formado por partes, mas as partes podem existir independentemente do todo.
+- Representada por uma linha com um losango branco na extremidade da classe que representa o "todo".
+
+![Image](https://github.com/user-attachments/assets/cd2b915b-a5b9-4927-b176-97e18f7139a1)
+
+➡ Um departamento pode ter zero ou mais professores vinculados a ele e um professor está vinculado a um departamento, mas um professor mesmo fora de um departamento (por isso não é composição). 
+
+**Composição**: representa uma relação "todo/parte", mas mais forte. Aqui, as partes não podem existir sem o todo — elas são criadas e destruídas junto com o todo.
+- Representada por uma linha com um losango preto na extremidade do "todo".
+
+![Image](https://github.com/user-attachments/assets/3aea29f3-0ac8-40f9-8e78-64fa0d147270)
+
+➡ Uma casa é composta por cômodos, e esses cômodos só existem enquanto a casa existir. Se a casa for destruída, os cômodos também desaparecem.
+
+
+---
+
+O relacionamento entre as classes Fechadura e Porta é de composição porque: 
+- Porta é o objeto principal, que pode abrir e fechar; e
+- Fechadura é o mecanismo que pertence à porta, usado para trancar/destrancar.
+
+➡ A fechadura não faz sentido existir isoladamente no sistema — ela está intrinsecamente ligada à porta. Quando uma porta é destruída, sua fechadura também é. Isso caracteriza uma composição: uma relação "parte/todo" forte, com dependência de vida. Esse modelo assume que a fechadura é construída junto com a porta e não é reutilizada em outra porta.
+
+>> Representamos ainda com um atributo do tipo Fechadura na classe Porta. A figura abaixo ilustra essa composição. 
+
+![Image](https://github.com/user-attachments/assets/c6e5cb8f-bb5f-4648-b909-9fbba6136dde)
+
+
 
 ### Sistema bancário/criação de contas
 
