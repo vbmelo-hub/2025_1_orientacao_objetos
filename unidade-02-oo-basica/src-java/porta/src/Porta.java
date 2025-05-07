@@ -4,7 +4,7 @@ public class Porta {
 	double espessura;
 	String material;
 	String cor;
-	String fechadura;
+	Fechadura fechadura;
 	boolean estaFechado = true;
 	boolean estaTrancado = true;
 	
@@ -21,7 +21,7 @@ public class Porta {
 	}
 	
 	public boolean destrancar(String chave) {
-		if (chave.equals("1234") || !estaTrancado ) {
+		if (this.fechadura.verificarChave(chave) || !estaTrancado ) {
 			estaTrancado = false;
 			return true;
 		}
@@ -29,7 +29,7 @@ public class Porta {
 	}
 	
 	public boolean trancar(String chave) {
-		if(chave.equals("1234")) {
+		if(this.fechadura.verificarChave(chave)) {
 			fechar();
 			estaTrancado = true;
 			return true;
