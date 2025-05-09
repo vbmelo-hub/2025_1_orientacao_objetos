@@ -1,11 +1,15 @@
+import java.text.DecimalFormat;
+
 public class Conta {
-	public String titular;
+	public Cliente titular;
 	public double saldo;
 	public String numero;
 	public String agencia;
 	public double limite;
+	DecimalFormat dfDinheiro = new DecimalFormat("###,##0.00");
+	
 	public boolean sacar(double valor) {
-		if (this.saldo >= valor) {
+		if (this.saldo + this.limite >= valor) {
 			this.saldo -= valor;
 			return true;
 		}
@@ -25,6 +29,22 @@ public class Conta {
 	}
 	
 	public String emitirSaldo() {
-		return "R$ " + Double.toString(this.saldo);
+		//String valor = String.format("%.2f", this.saldo);
+		String valor = dfDinheiro.format(this.saldo);
+		if (this.saldo < 0 ) return "R$ " + dfDinheiro.format(Math.abs(this.saldo)) + " D";
+		return "R$ " + valor;
+		
+	}
+	
+	@Override
+	public String toString() {
+		String relatorio = "Agência: " + this.agencia;
+		relatorio += "\nConta: " + this.numero;
+		relatorio += "\n" + this.titular.toString();
+		relatorio += "\nSaldo: " + this.emitirSaldo();
+		double limiteDisponivel = (this.saldo >= 0 ? this.limite : this.limite + this.saldo);
+		
+		relatorio += "\nLimite Disponível: R$ " + dfDinheiro.format(limiteDisponivel);
+		return relatorio;
 	}
 }
