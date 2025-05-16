@@ -11,7 +11,16 @@ public class Cliente {
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
 	}
+	
+	
 		
+	public Cliente(String nome, String cpf, String endereco, String dataNascimento) {
+		this(nome, cpf, dataNascimento);
+		this.endereco = endereco;
+	}
+
+
+
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}

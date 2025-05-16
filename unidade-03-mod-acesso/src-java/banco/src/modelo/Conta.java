@@ -7,14 +7,23 @@ public class Conta {
 	private String numero;
 	private String agencia;
 	private double limite;
+	public static int contador = 0;
 	DecimalFormat dfDinheiro = new DecimalFormat("###,##0.00");
 
+	//Construtor
 	public Conta(String numero, String agencia) {
 		this.numero = numero;
 		this.agencia = agencia;
-		this.saldo = 0;
-		this.limite = 0;
+		this.saldo = 0.0;
+		this.limite = 0.0;
+		contador++;
 	}
+	
+	public Conta(String numero, String agencia, Cliente cliente) {
+		this(numero, agencia);
+		this.titular = cliente;
+	}
+	
 	
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
