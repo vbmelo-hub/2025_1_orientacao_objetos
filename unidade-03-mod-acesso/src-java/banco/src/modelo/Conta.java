@@ -28,6 +28,9 @@ public class Conta {
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
+	public Cliente getTitular() {
+		return titular;
+	}
 
 	public boolean sacar(double valor) {
 		if (this.saldo + this.limite >= valor) {
