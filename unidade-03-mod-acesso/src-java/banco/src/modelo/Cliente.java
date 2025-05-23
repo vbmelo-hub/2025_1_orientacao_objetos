@@ -29,7 +29,7 @@ public class Cliente {
 	public String toString() {
 		String relatorio = "Nome: " + this.nome;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nEndereço: " + this.endereco;
+		if(this.endereco != null) relatorio += "\nEndereço: " + this.endereco;
 		relatorio += "\nData de Nascimento: " + this.dataNascimento;
 		return relatorio;
 	}

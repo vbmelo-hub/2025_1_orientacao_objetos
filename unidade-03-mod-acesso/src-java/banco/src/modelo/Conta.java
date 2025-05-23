@@ -64,7 +64,7 @@ public class Conta {
 	public String toString() {
 		String relatorio = "Agência: " + this.agencia;
 		relatorio += "\nConta: " + this.numero;
-		relatorio += "\n" + this.titular.toString();
+		if(this.titular != null) relatorio += "\n" + this.titular.toString();
 		relatorio += "\nSaldo: " + this.emitirSaldo();
 		double limiteDisponivel = (this.saldo >= 0 ? this.limite : this.limite + this.saldo);
 		

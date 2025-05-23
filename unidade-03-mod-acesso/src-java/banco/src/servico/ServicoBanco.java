@@ -24,8 +24,6 @@ public class ServicoBanco {
 	public void criarConta(String numero, String agencia, String cpfCliente) {
 		this.criarConta(numero, agencia);
 		Cliente cl = BDSimulado.getClientes().get(cpfCliente);
-		System.err.println(cl);
-		//System.err.println(BDSimulado.getContas().get(numero).toString());
 
 		BDSimulado.getContas().get(numero).setTitular(cl);
 	}
