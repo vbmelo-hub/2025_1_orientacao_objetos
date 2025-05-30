@@ -95,4 +95,5 @@ Organize seu projeto da seguinte forma:
 - Evite colocar a lógica na classe `main`;
 - Faça a impressão do menu de opções em um método estático da classe `main`;
 - Use os pacotes corretamente e distribua responsabilidades entre modelo, serviço, repositório e aplicação;
+- Assuma que as entradas do usuário serão sempre corretas (por exemplo, para um valor inteiro, a entrada será sempre inteira), ou seja, você não precisa tratar os dados de entrada;
 - Mostre que você **entendeu como projetar sistemas orientados a objetos de forma limpa e organizada**.
