@@ -56,13 +56,9 @@ Desenvolver uma aplicação Java orientada a objetos para **gerenciar uma biblio
 Organize seu projeto da seguinte forma:
 
     biblioteca/
-
       ├── aplicacao/ -> Classe principal com interação por texto com o usuário (tem o método main);
-
       ├── modelo/ -> Classes como Livro, Usuario, Emprestimo;
-
       ├── repositorio/ -> Classes com Map simulando o banco de dados;
-
       ├── servico/ -> Casos de uso (CadastrarLivro, RealizarEmprestimo etc.).
 
 
