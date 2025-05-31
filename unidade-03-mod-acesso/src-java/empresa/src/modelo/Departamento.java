@@ -19,7 +19,7 @@ public class Departamento {
 	
 	public boolean adicionarFuncionario(Funcionario f) {
 		//Verificar se o funcionário já não pertece ao departamento (pelo valor)
-		if(this.funcionarios.containsValue(f)) {
+		if(this.funcionarios.containsKey(f.getMatricula())) {
 			return false;
 		}
 		this.funcionarios.put(f.getMatricula(), f);
@@ -35,7 +35,7 @@ public class Departamento {
 	}
 	
 	public String listarFuncionarios() {
-		String lista = "Funcionários do " + this.nome + "\n";
+		String lista = "Funcion�rios do " + this.nome + "\n";
 		for(String m : this.funcionarios.keySet()) {
 			lista += m + " - " + this.funcionarios.get(m).getNome() + "\n";
 		}
@@ -45,5 +45,9 @@ public class Departamento {
 	public String emitirRelatorioUmFuncionario(String matriculaFuncionario) {
 		return this.funcionarios.get(matriculaFuncionario).toString() +
 				"\nDepartamento: " + this.nome;
+	}
+	
+	public int getQuantidadeFuncionarios() {
+		return this.funcionarios.size();
 	}
 }

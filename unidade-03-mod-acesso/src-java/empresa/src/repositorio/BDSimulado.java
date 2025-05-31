@@ -21,13 +21,20 @@ public class BDSimulado {
 	}
 	
 	public static boolean addFuncionario(Funcionario f) {
-		if(funcionarios.containsKey(f.getMatricula())) return false;
+		if(funcionarios.containsKey(f.getMatricula())) { //Verifica por matrícula
+			return false;
+		}
+		
+		if(verificarFuncionario(f.getCpf())) { //Verifica se o cpf existe
+			return false;
+		}
+		
 		funcionarios.put(f.getMatricula(), f);
 		return true;
 	}
 	
-	public static void removerFuncionario(String matricula) {
-		funcionarios.remove(matricula);
+	public static void removerFuncionario(String matricula) {		
+		funcionarios.remove(matricula); //Remove o funcionário do mapa de funcionários da empres
 	}
 	
 	public static boolean verificarDepartamento(String id) {

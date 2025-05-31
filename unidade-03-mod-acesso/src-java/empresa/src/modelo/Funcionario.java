@@ -78,9 +78,9 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		String relatorio = "\nNome: " + this.nome;
-		relatorio += "\nMatrï¿½cula: " + this.matricula;
+		relatorio += "\nMatrícula: " + this.matricula;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nSalï¿½rio: " + this.salario;
+		relatorio += "\nSalário: " + this.salario;
 		relatorio += "\nVencimento mensal: " + this.getVencimentoMensal();
 		return relatorio;
 	}

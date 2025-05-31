@@ -15,23 +15,28 @@ public class Servico {
 		if(BDSimulado.addDepartamento(d)) {
 			return "Departamento cadastrado com sucesso!";
 		}
-		return "Este departamento j√° est√° cadastrado!";
+		return "Este departamento j· est· cadastrado!";
 	}
 	
-	public void removerDepartamento(String id) {
-		BDSimulado.removerDepartamento(id);
+	public String removerDepartamento(String id) {
+		if(BDSimulado.getDepartamento(id).getQuantidadeFuncionarios() == 0) {
+			BDSimulado.removerDepartamento(id); //Para implementar: remover as referÍncias desse departamento em cada funcion·rio dele
+			return "Departamento removido com sucesso";
+		}
+		return "Um departamento com funcion·rios n„o pode ser excluÌdo";
+		
 	}
 	
 	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento) {
 		if(!BDSimulado.verificarDepartamento(idDepartamento)) {
-			return "O departamento do cliente n√£o existe!";
+			return "O departamento do cliente n„o existe!";
 		}
 		if(BDSimulado.verificarFuncionario(cpf)) {
-			return "CPF j√° cadastrado";
+			return "CPF j· cadastrado";
 		}
 		f = new Funcionario(nome, cpf, d);
 		BDSimulado.addFuncionario(f);
-		return "Funcion√°rio cadastrado com sucesso";
+		return "Funcion·rio cadastrado com sucesso";
 	}
 	
 	public void removerFuncionario(String matricula) {
@@ -47,7 +52,6 @@ public class Servico {
 		BDSimulado.getDepartamento(idOrigem).removerFuncionario(matricula);
 		BDSimulado.getDepartamento(idDestino).adicionarFuncionario(BDSimulado.getFuncionario(matricula));
 		BDSimulado.getFuncionario(matricula).setDepartamento(BDSimulado.getDepartamento(idDestino));
-		return "Funcion√°rio transferido com sucesso";
+		return "Funcion·rio transferido com sucesso";
 	}
-
 }
