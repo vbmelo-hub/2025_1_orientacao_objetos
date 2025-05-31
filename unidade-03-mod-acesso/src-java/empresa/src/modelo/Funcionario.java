@@ -27,7 +27,7 @@ public class Funcionario {
 	}
 
 
-	
+	//Método usado somente pelo próprio objeto
 	private String definirMatricula() {
 		String mat = Integer.toString(contador);
 		while(mat.length()<3) mat = "0" + mat;
@@ -42,8 +42,13 @@ public class Funcionario {
 		return this.bonificacao;
 	}
 	
-	public void concederAumento(double salario) {
-		this.salario = salario;
+	public boolean concederAumento(double salario) {
+		//Verificar se a mudança de saldo é realmente um aumento
+		if(this.salario < salario) {
+			this.salario = salario;
+			return true;
+		}
+		return false;		
 	}
 	
 	public double getVencimentoMensal() {
@@ -58,12 +63,24 @@ public class Funcionario {
 		return nome;
 	}
 	
+	public String getCpf() {
+		return cpf;
+	}
+	
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+	
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+	
 	@Override
 	public String toString() {
 		String relatorio = "\nNome: " + this.nome;
-		relatorio += "\nMatr�cula: " + this.matricula;
+		relatorio += "\nMatr�cula: " + this.matricula;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nSal�rio: " + this.salario;
+		relatorio += "\nSal�rio: " + this.salario;
 		relatorio += "\nVencimento mensal: " + this.getVencimentoMensal();
 		return relatorio;
 	}

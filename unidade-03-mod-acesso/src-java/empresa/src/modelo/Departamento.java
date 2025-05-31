@@ -9,25 +9,33 @@ public class Departamento {
 	public Departamento(String nome, String id) {
 		this.nome = nome;
 		this.id = id;
+		//Criação de um novo mapa a cada novo Departamento
+		this.funcionarios = new HashMap<String, Funcionario>(); 
 	}
 	
-	public boolean adicionarFuncionario(Funcionario funcionario) {
-		if(this.funcionarios.get(funcionario.getMatricula()) == null) {
-			this.funcionarios.put(funcionario.getMatricula(), funcionario);
-			return true;
+	public String getId() {
+		return id;
+	}
+	
+	public boolean adicionarFuncionario(Funcionario f) {
+		//Verificar se o funcionário já não pertece ao departamento (pelo valor)
+		if(this.funcionarios.containsValue(f)) {
+			return false;
 		}
-		return false;
+		this.funcionarios.put(f.getMatricula(), f);
+		return true;
 	}
 	
 	public boolean removerFuncionario(String matricula) {
 		if(this.funcionarios.containsKey(matricula)) {
 			funcionarios.remove(matricula);
+			return true;
 		}
 		return false;
 	}
 	
 	public String listarFuncionarios() {
-		String lista = "\n";
+		String lista = "Funcionários do " + this.nome + "\n";
 		for(String m : this.funcionarios.keySet()) {
 			lista += m + " - " + this.funcionarios.get(m).getNome() + "\n";
 		}
@@ -35,6 +43,7 @@ public class Departamento {
 	}
 	
 	public String emitirRelatorioUmFuncionario(String matriculaFuncionario) {
-		return this.funcionarios.get(matriculaFuncionario).toString();
+		return this.funcionarios.get(matriculaFuncionario).toString() +
+				"\nDepartamento: " + this.nome;
 	}
 }

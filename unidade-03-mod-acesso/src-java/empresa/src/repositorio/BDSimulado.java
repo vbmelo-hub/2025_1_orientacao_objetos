@@ -1,0 +1,51 @@
+package repositorio;
+
+import java.util.HashMap;
+
+import modelo.Departamento;
+import modelo.Funcionario;
+
+public class BDSimulado {
+	
+	private static HashMap<String, Departamento> departamentos = new HashMap<String, Departamento>();
+	private static HashMap<String, Funcionario> funcionarios = new HashMap<String, Funcionario>();
+	
+	public static boolean addDepartamento(Departamento d) {
+		if(departamentos.containsKey(d.getId())) return false; 
+		departamentos.put(d.getId(), d);
+		return true;
+	}
+	
+	public static void removerDepartamento(String id) {
+		departamentos.remove(id);
+	}
+	
+	public static boolean addFuncionario(Funcionario f) {
+		if(funcionarios.containsKey(f.getMatricula())) return false;
+		funcionarios.put(f.getMatricula(), f);
+		return true;
+	}
+	
+	public static void removerFuncionario(String matricula) {
+		funcionarios.remove(matricula);
+	}
+	
+	public static boolean verificarDepartamento(String id) {
+		return departamentos.containsKey(id);
+	}
+	
+	public static boolean verificarFuncionario(String cpf) {
+		for(Funcionario f : funcionarios.values()) {
+			if(f.getCpf().equals(cpf)) return false;
+		}
+		return true;
+	}
+	
+	public static Departamento getDepartamento(String id) {
+		return departamentos.get(id);
+	}
+	
+	public static Funcionario getFuncionario(String matricula) {
+		return funcionarios.get(matricula);
+	}
+}
