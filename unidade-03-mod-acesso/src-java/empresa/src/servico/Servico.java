@@ -15,28 +15,29 @@ public class Servico {
 		if(BDSimulado.addDepartamento(d)) {
 			return "Departamento cadastrado com sucesso!";
 		}
-		return "Este departamento já está cadastrado!";
+		return "Este departamento jï¿½ estï¿½ cadastrado!";
 	}
 	
 	public String removerDepartamento(String id) {
 		if(BDSimulado.getDepartamento(id).getQuantidadeFuncionarios() == 0) {
-			BDSimulado.removerDepartamento(id); //Para implementar: remover as referências desse departamento em cada funcionário dele
+			BDSimulado.removerDepartamento(id);
 			return "Departamento removido com sucesso";
 		}
-		return "Um departamento com funcionários não pode ser excluído";
+		return "Um departamento com funcionï¿½rios nï¿½o pode ser excluï¿½do";
 		
 	}
 	
 	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento) {
-		if(!BDSimulado.verificarDepartamento(idDepartamento)) {
-			return "O departamento do cliente não existe!";
+		if(!BDSimulado.verificarDepartamento(idDepartamento)) { 
+			return "O departamento do cliente nï¿½o existe!";
 		}
-		if(BDSimulado.verificarFuncionario(cpf)) {
-			return "CPF já cadastrado";
+		if(!BDSimulado.verificarFuncionario(cpf)) {
+			return "CPF jï¿½ cadastrado";
 		}
 		f = new Funcionario(nome, cpf, d);
 		BDSimulado.addFuncionario(f);
-		return "Funcionário cadastrado com sucesso";
+		BDSimulado.getDepartamento(idDepartamento).adicionarFuncionario(f); //mudanÃ§a feita para 4/6
+		return "Funcionï¿½rio cadastrado com sucesso";
 	}
 	
 	public void removerFuncionario(String matricula) {
@@ -52,6 +53,12 @@ public class Servico {
 		BDSimulado.getDepartamento(idOrigem).removerFuncionario(matricula);
 		BDSimulado.getDepartamento(idDestino).adicionarFuncionario(BDSimulado.getFuncionario(matricula));
 		BDSimulado.getFuncionario(matricula).setDepartamento(BDSimulado.getDepartamento(idDestino));
-		return "Funcionário transferido com sucesso";
+		return "Funcionï¿½rio transferido com sucesso";
+	}
+	
+	public String listarFuncionariosDepartamento(String id) {
+		Departamento d = BDSimulado.getDepartamento(id);
+		return d.listarFuncionarios();
+		
 	}
 }
