@@ -78,10 +78,14 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		String relatorio = "\nNome: " + this.nome;
-		relatorio += "\nMatrícula: " + this.matricula;
+		relatorio += "\nMatrï¿½cula: " + this.matricula;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nSalário: " + this.salario;
+		relatorio += "\nSalï¿½rio: " + this.salario;
 		relatorio += "\nVencimento mensal: " + this.getVencimentoMensal();
 		return relatorio;
+	}
+	
+	public String listarFuncionario() {
+		return this.matricula + " - " + this.nome; 
 	}
 }

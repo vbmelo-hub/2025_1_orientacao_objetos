@@ -31,11 +31,11 @@ public class Servico {
 		if(!BDSimulado.verificarDepartamento(idDepartamento)) { 
 			return "O departamento do cliente n�o existe!";
 		}
-		if(!BDSimulado.verificarFuncionario(cpf)) {
+		if(BDSimulado.verificarFuncionario(cpf)) {
 			return "CPF j� cadastrado";
 		}
 		f = new Funcionario(nome, cpf, d);
-		BDSimulado.addFuncionario(f);
+		System.err.println(BDSimulado.addFuncionario(f));
 		BDSimulado.getDepartamento(idDepartamento).adicionarFuncionario(f); //mudança feita para 4/6
 		return "Funcion�rio cadastrado com sucesso";
 	}
@@ -51,6 +51,7 @@ public class Servico {
 			return "Departamento de origem ou destino inexistente";
 		}
 		BDSimulado.getDepartamento(idOrigem).removerFuncionario(matricula);
+		System.err.println("Nome do funcionario: " + BDSimulado.getFuncionario(matricula).getMatricula() + " - " + BDSimulado.getFuncionario(matricula).getNome());
 		BDSimulado.getDepartamento(idDestino).adicionarFuncionario(BDSimulado.getFuncionario(matricula));
 		BDSimulado.getFuncionario(matricula).setDepartamento(BDSimulado.getDepartamento(idDestino));
 		return "Funcion�rio transferido com sucesso";
@@ -60,5 +61,13 @@ public class Servico {
 		Departamento d = BDSimulado.getDepartamento(id);
 		return d.listarFuncionarios();
 		
+	}
+	
+	public String listarFuncionarios() {
+		String lista = "\nLista de funcionários: \n";
+		for(Funcionario f : BDSimulado.getFuncionarios().values()) {
+			lista += f.listarFuncionario() + "\n";
+		}
+		return lista;
 	}
 }

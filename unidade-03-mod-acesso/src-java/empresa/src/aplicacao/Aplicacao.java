@@ -70,6 +70,10 @@ public class Aplicacao {
 				System.out.println(servico.listarFuncionariosDepartamento(identificador));
 				break;
 				
+			case 7: 
+				System.out.println(servico.listarFuncionarios());
+				break;
+				
 			default:
 				System.out.println("Opção inválida");;
 			}
@@ -88,6 +92,7 @@ public class Aplicacao {
 		menu += "\n4. Remover funcionário";
 		menu += "\n5. Transferir funcionário de departamento";
 		menu += "\n6. Listar funcionários de um departamento";
+		menu += "\n7. Listar todos os funcionários";
 		menu += "\n0. Sair do sistema";
 		System.out.println(menu);
 	}

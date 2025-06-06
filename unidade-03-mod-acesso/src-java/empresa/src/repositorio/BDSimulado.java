@@ -43,9 +43,9 @@ public class BDSimulado {
 	
 	public static boolean verificarFuncionario(String cpf) {
 		for(Funcionario f : funcionarios.values()) {
-			if(f.getCpf().equals(cpf)) return false;
+			if(f.getCpf().equals(cpf)) return true;
 		}
-		return true;
+		return false;
 	}
 	
 	public static Departamento getDepartamento(String id) {
@@ -54,5 +54,9 @@ public class BDSimulado {
 	
 	public static Funcionario getFuncionario(String matricula) {
 		return funcionarios.get(matricula);
+	}
+	
+	public static HashMap<String, Funcionario> getFuncionarios() {
+		return funcionarios;
 	}
 }
