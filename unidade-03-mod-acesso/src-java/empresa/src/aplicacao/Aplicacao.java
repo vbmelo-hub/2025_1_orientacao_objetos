@@ -1,10 +1,6 @@
 package aplicacao;
 
-import java.util.HashMap;
 import java.util.Scanner;
-
-import modelo.Departamento;
-import modelo.Funcionario;
 import servico.Servico;
 
 public class Aplicacao {
@@ -21,7 +17,7 @@ public class Aplicacao {
 			opcao = Byte.parseByte(teclado.nextLine());
 			switch (opcao) {
 			case 0: 
-				System.out.println("Voc√™ escolheu sair do sistema");
+				System.out.println("VocÍ escolheu sair do sistema");
 				break;
 			
 			case 1: 
@@ -39,23 +35,23 @@ public class Aplicacao {
 				break;
 				
 			case 3: 
-				System.out.print("Nome do funcion√°rio: ");
+				System.out.print("Nome do funcion·rio: ");
 				nome = teclado.nextLine();
 				System.out.print("CPF do funcion√°rio: ");
 				String cpf = teclado.nextLine();
-				System.out.print("ID do departamento de lota√ß√£o: ");
+				System.out.print("ID do departamento de lotaÁ„o: ");
 				identificador = teclado.nextLine();
 				System.out.println(servico.cadastrarFuncionario(nome, cpf, identificador));
 				break;
 				
 			case 4:
-				System.out.print("Matr√≠cula do funcion√°rio: ");
+				System.out.print("MatrÌcula do funcion√°rio: ");
 				matricula = teclado.nextLine();
-				System.out.println("Opera√ß√£o realizada");
+				System.out.println("OperaÁ„o realizada");
 				break;
 				
 			case 5:
-				System.out.print("Matr√≠cula do funcion√°rio: ");
+				System.out.print("MatrÌcula do funcion√°rio: ");
 				matricula = teclado.nextLine();
 				System.out.print("ID do departamento de lota√ß√£o atual: ");
 				identificador = teclado.nextLine();
@@ -75,7 +71,7 @@ public class Aplicacao {
 				break;
 				
 			default:
-				System.out.println("Op√ß√£o inv√°lida");;
+				System.out.println("OpÁ„o inv·lida");;
 			}
 			
 		}while(opcao != 0);
@@ -85,7 +81,7 @@ public class Aplicacao {
 	}
 	
 	public static void imprimirMenu() {
-		String menu = "\n\n============================================\nEscolha uma op√ß√£o: ";
+		String menu = "\n\n============================================\nEscolha uma opÁ„o: ";
 		menu += "\n1. Cadastrar departamento";
 		menu += "\n2. Remover departamento";
 		menu += "\n3. Cadastrar funcion√°rio";
