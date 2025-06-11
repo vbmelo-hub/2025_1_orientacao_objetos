@@ -1,13 +1,37 @@
+package modelo;
 import java.text.DecimalFormat;
 
 public class Conta {
-	public Cliente titular;
-	public double saldo;
-	public String numero;
-	public String agencia;
-	public double limite;
+	private Cliente titular;
+	private double saldo;
+	private String numero;
+	private String agencia;
+	private double limite;
+	public static int contador = 0;
 	DecimalFormat dfDinheiro = new DecimalFormat("###,##0.00");
+
+	//Construtor
+	public Conta(String numero, String agencia) {
+		this.numero = numero;
+		this.agencia = agencia;
+		this.saldo = 0.0;
+		this.limite = 0.0;
+		contador++;
+	}
 	
+	public Conta(String numero, String agencia, Cliente cliente) {
+		this(numero, agencia);
+		this.titular = cliente;
+	}
+	
+	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	public Cliente getTitular() {
+		return titular;
+	}
+
 	public boolean sacar(double valor) {
 		if (this.saldo + this.limite >= valor) {
 			this.saldo -= valor;
@@ -30,36 +54,21 @@ public class Conta {
 	
 	public String emitirSaldo() {
 		//String valor = String.format("%.2f", this.saldo);
-<<<<<<< HEAD
-		DecimalFormat df = new DecimalFormat("###,##0.00");
-		String valor = df.format(this.saldo);
-		if (this.saldo < 0) return "R$ " + df.format(Math.abs(this.saldo)) + " D";
-		return "R$ " + valor;
-=======
 		String valor = dfDinheiro.format(this.saldo);
 		if (this.saldo < 0 ) return "R$ " + dfDinheiro.format(Math.abs(this.saldo)) + " D";
 		return "R$ " + valor;
 		
->>>>>>> 8eea48490e44b1e8921b5cd9781a2fd0dea43abe
 	}
 	
 	@Override
 	public String toString() {
-<<<<<<< HEAD
-		String relatorio = "AgÃªncia: " + this.agencia;
-		relatorio += "\nConta: " + this.numero;
-		relatorio += "\nCliente: " + this.titular;
-		relatorio += "\nSaldo: " + this.emitirSaldo();
-		relatorio += "\nLimite DisponÃ­vel: " + (this.saldo >= 0 ? this.limite : this.limite + this.saldo);
-=======
 		String relatorio = "Agência: " + this.agencia;
 		relatorio += "\nConta: " + this.numero;
-		relatorio += "\n" + this.titular.toString();
+		if(this.titular != null) relatorio += "\n" + this.titular.toString();
 		relatorio += "\nSaldo: " + this.emitirSaldo();
 		double limiteDisponivel = (this.saldo >= 0 ? this.limite : this.limite + this.saldo);
 		
 		relatorio += "\nLimite Disponível: R$ " + dfDinheiro.format(limiteDisponivel);
->>>>>>> 8eea48490e44b1e8921b5cd9781a2fd0dea43abe
 		return relatorio;
 	}
 }
