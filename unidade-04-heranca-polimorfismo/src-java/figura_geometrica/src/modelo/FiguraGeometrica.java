@@ -12,4 +12,7 @@ public class FiguraGeometrica {
 	public String getDescricao() {
 		return descricao;
 	}
+	public double getPerimetro() {
+		return 0;
+	}
 }

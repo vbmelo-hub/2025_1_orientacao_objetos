@@ -12,4 +12,5 @@ public class Retangulo extends Quadrilatero {
 	public double getArea() {
 		return this.lado1 * this.lado3;
 	}
+	
 }
