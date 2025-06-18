@@ -1,7 +1,16 @@
 package modelo;
 
 public class Retangulo extends Quadrilatero {
-	Retangulo(String descricao){
-		super(descricao);
+	public Retangulo(String descricao, double altura, double largura){
+	 super(descricao, altura, altura, largura, largura);
+ }
+	@Override
+	public String getDescricao() {
+		return "Este � um retangulo";
 	}
+	@Override
+	public double getArea() {
+		return this.lado1 * this.lado3;
+	}
+	
 }

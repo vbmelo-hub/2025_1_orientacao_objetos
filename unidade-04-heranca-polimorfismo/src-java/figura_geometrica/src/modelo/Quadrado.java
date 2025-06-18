@@ -2,9 +2,12 @@ package modelo;
 
 public class Quadrado extends Retangulo {
 
-	Quadrado(String descricao) {
-		super(descricao);
-		// TODO Auto-generated constructor stub
-	}
+	public Quadrado(String descricao, double lado) {
+		super(descricao, lado, lado);
 
+	}
+	@Override
+	public String getDescricao() {
+		return  super.getDescricao()+" do tipo quadrado";
+	}
 }
