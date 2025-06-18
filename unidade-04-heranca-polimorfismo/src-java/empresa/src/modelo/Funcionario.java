@@ -4,8 +4,8 @@ public class Funcionario {
 	private String matricula;
 	private String nome;
 	private String cpf;
-	private double salario;
-	private double bonificacao;
+	protected double salario;
+	protected double bonificacao;
 	private Departamento departamento;
 	
 	private static int contador = 0;
@@ -37,9 +37,8 @@ public class Funcionario {
 		return mat.toUpperCase();
 	}
 
-	public double bonificar() {
+	public void bonificar() {
 		this.bonificacao = salario*0.15;
-		return this.bonificacao;
 	}
 	
 	public boolean concederAumento(double salario) {
@@ -56,15 +55,19 @@ public class Funcionario {
 	}
 	
 	public String getMatricula() {
-		return matricula;
+		return this.matricula;
 	}
 	
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 	
 	public String getCpf() {
-		return cpf;
+		return this.cpf;
+	}
+	
+	public double getBonificacao() {
+		return this.bonificacao;
 	}
 	
 	public void setDepartamento(Departamento departamento) {

@@ -1,12 +1,18 @@
 package aplicacao;
 
 import java.util.Scanner;
+
+import modelo.Departamento;
+import modelo.Diretor;
+import modelo.Funcionario;
+import modelo.Gerente;
+import servico.ControleBonificacao;
 import servico.Servico;
 
 public class Aplicacao {
 
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
+		/*Scanner teclado = new Scanner(System.in);
 		String nome;
 		String identificador;
 		String matricula;
@@ -90,7 +96,21 @@ public class Aplicacao {
 		menu += "\n6. Listar funcionários de um departamento";
 		menu += "\n7. Listar todos os funcionários";
 		menu += "\n0. Sair do sistema";
-		System.out.println(menu);
+		System.out.println(menu);*/
+		
+		Funcionario f = new Funcionario("Jo�o", "1234",1000.0, null);
+		System.out.println(ControleBonificacao.registrarBonficacao(f));
+		Gerente g = new Gerente("Pedro", "0987", 1000.0, null);
+		System.out.println(ControleBonificacao.registrarBonficacao(g));
+		Diretor d = new Diretor("Rosi", "0987", 1000.0, null);
+		System.out.println(ControleBonificacao.registrarBonficacao(d));
+
+		System.out.println(ControleBonificacao.getTotalBonficacao());
+		
+		
+		
+		//System.out.println(f.getVencimentoMensal());
+		//System.out.println(g.getVencimentoMensal());
 	}
 
 }

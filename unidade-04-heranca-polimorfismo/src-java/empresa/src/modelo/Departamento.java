@@ -9,7 +9,7 @@ public class Departamento {
 	public Departamento(String nome, String id) {
 		this.nome = nome;
 		this.id = id;
-		//CriaÃ§Ã£o de um novo mapa a cada novo Departamento
+		//Criação de um novo mapa a cada novo Departamento
 		this.funcionarios = new HashMap<String, Funcionario>(); 
 	}
 	

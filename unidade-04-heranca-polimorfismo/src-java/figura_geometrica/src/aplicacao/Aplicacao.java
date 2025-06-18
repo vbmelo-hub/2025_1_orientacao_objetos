@@ -2,6 +2,7 @@ package aplicacao;
 
 import java.util.ArrayList;
 
+
 import modelo.Circulo;
 import modelo.FiguraGeometrica;
 import modelo.Quadrado;
@@ -13,17 +14,21 @@ public class Aplicacao {
 	static ArrayList<FiguraGeometrica> figuras = new ArrayList<FiguraGeometrica>();
 
 	public static void main(String[] args) {
-		FiguraGeometrica r = new Retangulo("Retangulo", 5, 3);
+		Retangulo r = new Retangulo("Retangulo", 5, 3);
 		figuras.add(r);
-		FiguraGeometrica c = new Circulo("Circulo", 4);
+		Circulo c = new Circulo("Circulo", 4);
 		figuras.add(c);
-		FiguraGeometrica q = new Quadrado("Quadrado", 10);
+		Quadrado q = new Quadrado("Quadrado", 10);
 		figuras.add(q);
 		double d = Math.sqrt(Math.pow(8-5, 2) + 3*3);
-		FiguraGeometrica t = new Trapezio("Trapézio", 8, 5 ,d, 3);
+		Trapezio t = new Trapezio("Trapézio", 8, 5 ,d, 3);
 		figuras.add(t);
 		
 		for(FiguraGeometrica f : figuras) {
+			if(f instanceof Retangulo) {
+				System.out.println("É um retangulo");
+				
+			}
 			System.out.println("Área: " + f.getArea() + "\tPerímetro: " + f.getPerimetro());
 		}
 		
