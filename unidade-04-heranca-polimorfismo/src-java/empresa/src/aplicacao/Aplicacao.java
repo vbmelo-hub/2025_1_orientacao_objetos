@@ -12,7 +12,7 @@ import servico.Servico;
 public class Aplicacao {
 
 	public static void main(String[] args) {
-		/*Scanner teclado = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
 		String nome;
 		String identificador;
 		String matricula;
@@ -23,7 +23,7 @@ public class Aplicacao {
 			opcao = Byte.parseByte(teclado.nextLine());
 			switch (opcao) {
 			case 0: 
-				System.out.println("Você escolheu sair do sistema");
+				System.out.println("Vocï¿½ escolheu sair do sistema");
 				break;
 			
 			case 1: 
@@ -41,23 +41,23 @@ public class Aplicacao {
 				break;
 				
 			case 3: 
-				System.out.print("Nome do funcionário: ");
+				System.out.print("Nome do funcionï¿½rio: ");
 				nome = teclado.nextLine();
 				System.out.print("CPF do funcionÃ¡rio: ");
 				String cpf = teclado.nextLine();
-				System.out.print("ID do departamento de lotação: ");
+				System.out.print("ID do departamento de lotaï¿½ï¿½o: ");
 				identificador = teclado.nextLine();
 				System.out.println(servico.cadastrarFuncionario(nome, cpf, identificador));
 				break;
 				
 			case 4:
-				System.out.print("Matrícula do funcionÃ¡rio: ");
+				System.out.print("Matrï¿½cula do funcionÃ¡rio: ");
 				matricula = teclado.nextLine();
-				System.out.println("Operação realizada");
+				System.out.println("Operaï¿½ï¿½o realizada");
 				break;
 				
 			case 5:
-				System.out.print("Matrícula do funcionÃ¡rio: ");
+				System.out.print("Matrï¿½cula do funcionÃ¡rio: ");
 				matricula = teclado.nextLine();
 				System.out.print("ID do departamento de lotaÃ§Ã£o atual: ");
 				identificador = teclado.nextLine();
@@ -77,7 +77,7 @@ public class Aplicacao {
 				break;
 				
 			default:
-				System.out.println("Opção inválida");;
+				System.out.println("Opï¿½ï¿½o invï¿½lida");;
 			}
 			
 		}while(opcao != 0);
@@ -87,7 +87,7 @@ public class Aplicacao {
 	}
 	
 	public static void imprimirMenu() {
-		String menu = "\n\n============================================\nEscolha uma opção: ";
+		String menu = "\n\n============================================\nEscolha uma opï¿½ï¿½o: ";
 		menu += "\n1. Cadastrar departamento";
 		menu += "\n2. Remover departamento";
 		menu += "\n3. Cadastrar funcionÃ¡rio";
@@ -96,9 +96,11 @@ public class Aplicacao {
 		menu += "\n6. Listar funcionÃ¡rios de um departamento";
 		menu += "\n7. Listar todos os funcionÃ¡rios";
 		menu += "\n0. Sair do sistema";
-		System.out.println(menu);*/
+		System.out.println(menu);
 		
-		Funcionario f = new Funcionario("João", "1234",1000.0, null);
+		/*
+		
+		Funcionario f = new Funcionario("Joï¿½o", "1234",1000.0, null);
 		System.out.println(ControleBonificacao.registrarBonficacao(f));
 		Gerente g = new Gerente("Pedro", "0987", 1000.0, null);
 		System.out.println(ControleBonificacao.registrarBonficacao(g));
@@ -110,7 +112,7 @@ public class Aplicacao {
 		
 		
 		//System.out.println(f.getVencimentoMensal());
-		//System.out.println(g.getVencimentoMensal());
+		//System.out.println(g.getVencimentoMensal());*/
 	}
 
 }
