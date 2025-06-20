@@ -6,6 +6,13 @@ public class Diretor extends Gerente {
 		super(nome, cpf, salario, departamento);
 	}
 	
+	public Diretor(String nome, String cpf, Departamento departamento){
+		super(nome, cpf, departamento);
+		
+		
+		
+	}
+	
 	@Override
 	public void bonificar() {
 		super.bonificar();
