@@ -1,4 +1,6 @@
-package modelo;
+package modelo.funcionario;
+
+import modelo.departamento.Departamento;
 
 public class Gerente extends Funcionario {
 

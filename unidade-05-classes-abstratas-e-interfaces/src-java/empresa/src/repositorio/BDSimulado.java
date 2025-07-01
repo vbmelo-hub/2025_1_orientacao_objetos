@@ -2,8 +2,8 @@ package repositorio;
 
 import java.util.HashMap;
 
-import modelo.Departamento;
-import modelo.Funcionario;
+import modelo.departamento.Departamento;
+import modelo.funcionario.Funcionario;
 
 public class BDSimulado {
 	

@@ -1,6 +1,10 @@
 package servico;
 
-import modelo.*;
+import modelo.departamento.Departamento;
+import modelo.funcionario.Diretor;
+import modelo.funcionario.Funcionario;
+import modelo.funcionario.Gerente;
+import modelo.funcionario.Vendedor;
 import repositorio.BDSimulado;
 
 //Classe que implementa os casos de uso
@@ -14,7 +18,7 @@ public class Servico {
 		if(BDSimulado.addDepartamento(d)) {
 			return "Departamento cadastrado com sucesso!";
 		}
-		return "Este departamento já está cadastrado!";
+		return "Este departamento jï¿½ estï¿½ cadastrado!";
 	}
 	
 	public String removerDepartamento(String id) {
@@ -22,16 +26,16 @@ public class Servico {
 			BDSimulado.removerDepartamento(id);
 			return "Departamento removido com sucesso";
 		}
-		return "Um departamento com funcionários não pode ser excluído";
+		return "Um departamento com funcionï¿½rios nï¿½o pode ser excluï¿½do";
 		
 	}
 	
 	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento, String tipo) {
 		if(!BDSimulado.verificarDepartamento(idDepartamento)) { 
-			return "O departamento do cliente não existe!";
+			return "O departamento do cliente nï¿½o existe!";
 		}
 		if(BDSimulado.verificarFuncionario(cpf)) {
-			return "CPF já cadastrado";
+			return "CPF jï¿½ cadastrado";
 		}
 		d = BDSimulado.getDepartamento(idDepartamento);
 
@@ -44,9 +48,9 @@ public class Servico {
 		}
 	
 		d.adicionarFuncionario(f);
-		//mudança feita para 4/6
+		//mudanï¿½a feita para 4/6
 		BDSimulado.addFuncionario(f);
-		return "Funcionário cadastrado com sucesso";
+		return "Funcionï¿½rio cadastrado com sucesso";
 	}
 	
 	public void removerFuncionario(String matricula) {
@@ -62,7 +66,7 @@ public class Servico {
 		BDSimulado.getDepartamento(idOrigem).removerFuncionario(matricula);
 		BDSimulado.getDepartamento(idDestino).adicionarFuncionario(BDSimulado.getFuncionario(matricula));
 		BDSimulado.getFuncionario(matricula).setDepartamento(BDSimulado.getDepartamento(idDestino));
-		return "Funcionário transferido com sucesso";
+		return "Funcionï¿½rio transferido com sucesso";
 	}
 	
 	public String listarFuncionariosDepartamento(String id) {
@@ -72,7 +76,7 @@ public class Servico {
 	}
 	
 	public String listarFuncionarios() {
-		String lista = "\nLista de funcionários: \n";
+		String lista = "\nLista de funcionï¿½rios: \n";
 		for(Funcionario f : BDSimulado.getFuncionarios().values()) {
 			lista += f.listarFuncionario() + "\n";
 		}

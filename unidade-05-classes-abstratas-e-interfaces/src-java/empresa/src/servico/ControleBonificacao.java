@@ -1,6 +1,6 @@
 package servico;
 
-import modelo.Funcionario;
+import modelo.funcionario.Funcionario;
 
 public class ControleBonificacao {
 	private static double totalBonficacao = 0;

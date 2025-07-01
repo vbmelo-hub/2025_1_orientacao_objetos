@@ -2,7 +2,6 @@ package ui;
 
 import java.util.Scanner;
 
-import modelo.Vendedor;
 import servico.Servico;
 
 public class InterfaceUsuario {
@@ -61,7 +60,7 @@ public class InterfaceUsuario {
 				break;
 				
 			default:
-				System.out.println("Opção Invalida.");
+				System.out.println("Opï¿½ï¿½o Invalida.");
 			break;
 			
 			}		
@@ -80,7 +79,7 @@ public class InterfaceUsuario {
 	}
 
 	private void transferirFuncionario() {
-		 System.out.print("Matrícula do funcionário: ");
+		 System.out.print("Matrï¿½cula do funcionï¿½rio: ");
 	        String matricula = teclado.nextLine();
 	        System.out.print("ID do departamento de origem: ");
 	        String idOrigem = teclado.nextLine();
@@ -91,7 +90,7 @@ public class InterfaceUsuario {
 	}
 
 	private void removerfuncionario() {
-		System.out.print("Matrícula do funcion?rio: ");
+		System.out.print("Matrï¿½cula do funcion?rio: ");
         String matricula = teclado.nextLine();
 		servico.removerFuncionario(matricula);
 		
@@ -102,9 +101,9 @@ public class InterfaceUsuario {
 	        String nome = teclado.nextLine();
 	        System.out.print("CPF do " + tipo + ": ");
 	        String cpf = teclado.nextLine();
-	        System.out.print("ID do departamento de lotação: ");
+	        System.out.print("ID do departamento de lotaï¿½ï¿½o: ");
 	        String idDepartamento = teclado.nextLine();
-	        System.out.print("Salário: ");
+	        System.out.print("Salï¿½rio: ");
 	        double salario = Double.parseDouble(teclado.nextLine());
 	        System.out.println(servico.cadastrarFuncionario(nome, cpf,idDepartamento, tipo));
 		
@@ -130,16 +129,16 @@ public class InterfaceUsuario {
 	private void imprimirMenu() {
 		StringBuilder menu = new StringBuilder();
 		menu.append("\n============================================\n");
-        menu.append("Escolha uma opção:\n");
+        menu.append("Escolha uma opï¿½ï¿½o:\n");
         menu.append("1. Cadastrar departamento\n");
         menu.append("2. Remover departamento\n");
         menu.append("3. Cadastrar gerente\n");
         menu.append("4. Cadastrar diretor\n");
 		menu.append("5. Cadastrar vendedor\n");
-        menu.append("6. Remover funcionário\n");
-        menu.append("7. Transferir funcionário de departamento\n");
-        menu.append("8. Listar funcionários de um departamento\n");
-        menu.append("9. Listar todos os funcionários\n");
+        menu.append("6. Remover funcionï¿½rio\n");
+        menu.append("7. Transferir funcionï¿½rio de departamento\n");
+        menu.append("8. Listar funcionï¿½rios de um departamento\n");
+        menu.append("9. Listar todos os funcionï¿½rios\n");
         menu.append("0. Sair do sistema\n");
         System.out.println(menu);
 		

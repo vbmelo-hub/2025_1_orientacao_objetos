@@ -1,4 +1,6 @@
-package modelo;
+package modelo.departamento;
+import modelo.funcionario.Funcionario;
+
 import java.util.HashMap;
 
 public class Departamento {
@@ -9,7 +11,7 @@ public class Departamento {
 	public Departamento(String nome, String id) {
 		this.nome = nome;
 		this.id = id;
-		//Criação de um novo mapa a cada novo Departamento
+		//Criaï¿½ï¿½o de um novo mapa a cada novo Departamento
 		this.funcionarios = new HashMap<String, Funcionario>(); 
 	}
 	
@@ -35,7 +37,7 @@ public class Departamento {
 	}
 	
 	public String listarFuncionarios() {
-		String lista = "Funcionários do " + this.nome + "\n";
+		String lista = "Funcionï¿½rios do " + this.nome + "\n";
 		for(Funcionario m : this.funcionarios.values()) {
 			lista += m.listarFuncionario() + "\n";
 		}
