@@ -2,10 +2,12 @@ package modelo.cliente;
 
 public class PessoaJuridica extends Cliente{
     private String cnpj;
+    private String nomeFantasia;
 
-    public PessoaJuridica(String nome, String endereco, String cnpj) {
+    public PessoaJuridica(String nome, String nomeFantasia, String endereco, String cnpj) {
         super(nome, endereco);
         this.cnpj = cnpj;
+        this.nomeFantasia = nomeFantasia;
     }
 
     @Override
@@ -15,6 +17,8 @@ public class PessoaJuridica extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() + "\nCNPJ: " + this.cnpj;
+        return "Razão social: " + this.nome +
+                "\nNome fantasia: " + this.nomeFantasia
+                + super.toString() + "\nCNPJ: " + this.cnpj;
     }
 }

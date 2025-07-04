@@ -15,6 +15,6 @@ public class PessoaFisica extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() + "\nCPF: " + this.cpf;
+        return "Nome: " + this.nome + super.toString() + "\nCPF: " + this.cpf;
     }
 }

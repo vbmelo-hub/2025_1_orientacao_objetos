@@ -1,7 +1,7 @@
 package modelo.cliente;
 
 public abstract class Cliente {
-    private String nome;
+    protected String nome;
     private String endereco;
 
     public Cliente(String nome, String endereco) {
@@ -13,7 +13,7 @@ public abstract class Cliente {
 
     @Override
     public String toString() {
-        return "Nome: " + this.nome + "\nEndereço: " + this.endereco;
+        return "\nEndereço: " + this.endereco;
     }
 }
 

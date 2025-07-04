@@ -13,9 +13,9 @@ public class Aplicacao {
 	Servico servico = new Servico();
 	InterfaceUsuario iu = new InterfaceUsuario(servico);
 		Cliente c;
-		c = new PessoaFisica("Jõao", "Rua A", "123");
+		c = new PessoaFisica("João", "Rua A", "123");
 		System.out.println(c.toString());
-		c = new PessoaJuridica("Ardidas", "Rua B", "456");
+		c = new PessoaJuridica("Ardidas", "Ardidas Pimentas", "Rua B", "456");
 		System.out.println(c.toString());
 	//iu.exibir();
 	
