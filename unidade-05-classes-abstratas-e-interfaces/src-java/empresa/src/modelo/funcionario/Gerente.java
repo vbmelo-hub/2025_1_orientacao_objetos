@@ -1,8 +1,9 @@
 package modelo.funcionario;
 
+import modelo.Autenticavel;
 import modelo.departamento.Departamento;
 
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Autenticavel {
 
 	private int numeroFuncionariosGerenciados;
 	private String senha;

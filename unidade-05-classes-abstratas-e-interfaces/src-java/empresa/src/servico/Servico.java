@@ -1,6 +1,8 @@
 package servico;
 
+import modelo.Autenticavel;
 import modelo.departamento.Departamento;
+import modelo.fornecedor.Fornecedor;
 import modelo.funcionario.Diretor;
 import modelo.funcionario.Funcionario;
 import modelo.funcionario.Gerente;
@@ -18,7 +20,7 @@ public class Servico {
 		if(BDSimulado.addDepartamento(d)) {
 			return "Departamento cadastrado com sucesso!";
 		}
-		return "Este departamento j� est� cadastrado!";
+		return "Este departamento já está cadastrado!";
 	}
 	
 	public String removerDepartamento(String id) {
@@ -32,16 +34,16 @@ public class Servico {
 	
 	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento, String tipo) {
 		if(!BDSimulado.verificarDepartamento(idDepartamento)) { 
-			return "O departamento do cliente n�o existe!";
+			return "O departamento do cliente não existe!";
 		}
 		if(BDSimulado.verificarFuncionario(cpf)) {
-			return "CPF j� cadastrado";
+			return "CPF já cadastrado";
 		}
 		d = BDSimulado.getDepartamento(idDepartamento);
 
 		if (tipo.equalsIgnoreCase("gerente")) {
 			f = new Gerente(nome, cpf, d);
-		}else if (tipo.equalsIgnoreCase("diretor")) {
+		} else if (tipo.equalsIgnoreCase("diretor")) {
 			f = new Diretor(nome, cpf, d);
 		} else if (tipo.equalsIgnoreCase("vendedor")) {
 			f = new Vendedor(nome, cpf, d);
@@ -49,8 +51,20 @@ public class Servico {
 	
 		d.adicionarFuncionario(f);
 		//mudan�a feita para 4/6
-		BDSimulado.addFuncionario(f);
-		return "Funcion�rio cadastrado com sucesso";
+		if(f instanceof Autenticavel) {
+			BDSimulado.addAutenticavel((Autenticavel) f);
+		}
+		return "Funcionário cadastrado com sucesso";
+	}
+
+	public String cadastrarFornecedor(String nome, String cnpj, String senha) {
+		if(BDSimulado.verificarAutenticavel(cnpj)) {
+			return "Fornecedor já cadastrado";
+		}
+
+		Autenticavel fornecedor = new Fornecedor(cnpj, nome, senha);
+		BDSimulado.addAutenticavel(fornecedor);
+		return "Fornecedor cadastrado com sucesso";
 	}
 	
 	public void removerFuncionario(String matricula) {

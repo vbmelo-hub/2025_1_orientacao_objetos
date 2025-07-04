@@ -10,9 +10,6 @@ public class Diretor extends Gerente {
 	
 	public Diretor(String nome, String cpf, Departamento departamento){
 		super(nome, cpf, departamento);
-		
-		
-		
 	}
 	
 	@Override

@@ -1,14 +1,17 @@
 package repositorio;
 
 import java.util.HashMap;
+import java.util.Map;
 
+import modelo.Autenticavel;
 import modelo.departamento.Departamento;
 import modelo.funcionario.Funcionario;
 
 public class BDSimulado {
 	
-	private static HashMap<String, Departamento> departamentos = new HashMap<String, Departamento>();
-	private static HashMap<String, Funcionario> funcionarios = new HashMap<String, Funcionario>();
+	private static Map<String, Departamento> departamentos = new HashMap<String, Departamento>();
+	private static Map<String, Funcionario> funcionarios = new HashMap<String, Funcionario>();
+	private static Map<String, Autenticavel> autenticaveis = new HashMap<String, Autenticavel>();
 	
 	public static boolean addDepartamento(Departamento d) {
 		if(departamentos.containsKey(d.getId())) return false; 
@@ -47,6 +50,22 @@ public class BDSimulado {
 		}
 		return false;
 	}
+
+	public static boolean addAutenticavel(Autenticavel a) {
+		if(autenticaveis.containsKey(a.getId())) {
+			return false;
+		}
+
+		autenticaveis.put(a.getId(), a);
+		return true;
+	}
+
+	public static boolean verificarAutenticavel(String cnpj) {
+		for(Autenticavel a : autenticaveis.values()) {
+			if(a.getId().equals(cnpj)) return true;
+		}
+		return false;
+	}
 	
 	public static Departamento getDepartamento(String id) {
 		return departamentos.get(id);
@@ -56,7 +75,7 @@ public class BDSimulado {
 		return funcionarios.get(matricula);
 	}
 	
-	public static HashMap<String, Funcionario> getFuncionarios() {
+	public static Map<String, Funcionario> getFuncionarios() {
 		return funcionarios;
 	}
 }
