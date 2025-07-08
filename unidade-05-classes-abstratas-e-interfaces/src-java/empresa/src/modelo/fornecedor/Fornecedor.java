@@ -14,6 +14,11 @@ public class Fornecedor implements Autenticavel {
     }
 
     @Override
+    public String getId() {
+        return cnpj;
+    }
+
+    @Override
     public boolean autenticar(String senha) {
         return this.senha.equals(senha);
     }

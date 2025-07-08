@@ -24,7 +24,7 @@ public class BDSimulado {
 	}
 	
 	public static boolean addFuncionario(Funcionario f) {
-		if(funcionarios.containsKey(f.getMatricula())) { //Verifica por matr?cula
+		if(funcionarios.containsKey(f.getId())) { //Verifica por matr?cula
 			return false;
 		}
 		
@@ -32,7 +32,7 @@ public class BDSimulado {
 			return false;
 		}
 		
-		funcionarios.put(f.getMatricula(), f);
+		funcionarios.put(f.getId(), f);
 		return true;
 	}
 	

@@ -1,18 +1,20 @@
 package ui;
 
-import java.util.Scanner;
+import servico.ServicoDepartamento;
+import servico.ServicoFuncionario;
 
-import servico.Servico;
+import java.util.Scanner;
 
 public class InterfaceUsuario {
 
 	private Scanner teclado;
-	private Servico servico;
+	private ServicoFuncionario servicoFuncionario;
+	private ServicoDepartamento servicoDepartamento;
 
-	public InterfaceUsuario(Servico servico) {
-		this.servico = servico;
+	public InterfaceUsuario(ServicoFuncionario servicoFuncionario, ServicoDepartamento servicoDepartamento) {
+		this.servicoFuncionario = servicoFuncionario;
+		this.servicoDepartamento = servicoDepartamento;
 		this.teclado = new Scanner(System.in);
-		
 	}
 
 	public void exibir() {
@@ -56,7 +58,7 @@ public class InterfaceUsuario {
 				break;
 				
 			case 9:
-				System.out.println(servico.listarFuncionarios());
+				System.out.println(servicoFuncionario.listarFuncionarios());
 				break;
 				
 			default:
@@ -66,16 +68,12 @@ public class InterfaceUsuario {
 			}		
 		}while (opcao != 0);
 		teclado.close();
-		
-		
-		
 	}
 
 	private void listarFuncionariosDepartamento() {
 		  System.out.print("ID do departamento: ");
 	        String id = teclado.nextLine();
-	        System.out.println(servico.listarFuncionariosDepartamento(id));
-		
+	        System.out.println(servicoDepartamento.listarFuncionariosDepartamento(id));
 	}
 
 	private void transferirFuncionario() {
@@ -85,15 +83,13 @@ public class InterfaceUsuario {
 	        String idOrigem = teclado.nextLine();
 	        System.out.print("ID do departamento de destino: ");
 	        String idDestino = teclado.nextLine();
-	        System.out.println(servico.trasferirFuncionarioDepartamento(matricula, idOrigem, idDestino));
-		
+	        System.out.println(servicoFuncionario.trasferirFuncionarioDepartamento(matricula, idOrigem, idDestino));
 	}
 
 	private void removerfuncionario() {
 		System.out.print("Matr�cula do funcion?rio: ");
         String matricula = teclado.nextLine();
-		servico.removerFuncionario(matricula);
-		
+		servicoFuncionario.removerFuncionario(matricula);
 	}
 
 	private void cadastrarFuncionario(String tipo) {
@@ -105,15 +101,13 @@ public class InterfaceUsuario {
 	        String idDepartamento = teclado.nextLine();
 	        System.out.print("Sal�rio: ");
 	        double salario = Double.parseDouble(teclado.nextLine());
-	        System.out.println(servico.cadastrarFuncionario(nome, cpf,idDepartamento, tipo));
-		
+	        System.out.println(servicoFuncionario.cadastrarFuncionario(nome, cpf,idDepartamento, tipo));
 	}
 
 	private void removerDepartamento() {
 		   System.out.print("ID do departamento: ");
 	        String id = teclado.nextLine();
-	        System.out.println(servico.removerDepartamento(id));
-		
+	        System.out.println(servicoDepartamento.removerDepartamento(id));
 	}
 
 	private void cadastrarDepartamento() {
@@ -121,9 +115,7 @@ public class InterfaceUsuario {
         String nome = teclado.nextLine();
         System.out.print("ID do departamento: ");
         String id = teclado.nextLine();
-        System.out.println(servico.cadastrarDepartamento(nome, id));
-
-		
+        System.out.println(servicoDepartamento.cadastrarDepartamento(nome, id));
 	}
 
 	private void imprimirMenu() {
@@ -141,7 +133,6 @@ public class InterfaceUsuario {
         menu.append("9. Listar todos os funcion�rios\n");
         menu.append("0. Sair do sistema\n");
         System.out.println(menu);
-		
 	}
 	
 }

@@ -7,7 +7,6 @@ public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	protected double salario;
-	protected double bonificacao;
 	private Departamento departamento;
 	
 	private static int contador = 0;
@@ -20,8 +19,7 @@ public abstract class Funcionario {
 		contador++;
 		this.matricula = this.definirMatricula();
 	}
-	
-	
+
 
 	public Funcionario(String nome, String cpf, double salario, Departamento departamento) {
 		this(nome, cpf, departamento);
@@ -29,7 +27,7 @@ public abstract class Funcionario {
 	}
 
 
-	//M?todo usado somente pelo pr?prio objeto
+	//Método usado somente pelo próprio objeto
 	private String definirMatricula() {
 		String mat = Integer.toString(contador);
 		while(mat.length()<3) mat = "0" + mat;
@@ -39,10 +37,9 @@ public abstract class Funcionario {
 		return mat.toUpperCase();
 	}
 
-	public abstract void bonificar();
 	
 	public boolean concederAumento(double salario) {
-		//Verificar se a mudan?a de saldo ? realmente um aumento
+		//Verificar se a mudança de saldo é realmente um aumento
 		if(this.salario < salario) {
 			this.salario = salario;
 			return true;
@@ -51,10 +48,10 @@ public abstract class Funcionario {
 	}
 	
 	public double getVencimentoMensal() {
-		return this.salario + this.bonificacao;
+		return this.salario;
 	}
 	
-	public String getMatricula() {
+	public String getId() {
 		return this.matricula;
 	}
 	
@@ -65,10 +62,7 @@ public abstract class Funcionario {
 	public String getCpf() {
 		return this.cpf;
 	}
-	
-	public double getBonificacao() {
-		return this.bonificacao;
-	}
+
 	
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
@@ -81,9 +75,9 @@ public abstract class Funcionario {
 	@Override
 	public String toString() {
 		String relatorio = "\nNome: " + this.nome;
-		relatorio += "\nMatr?cula: " + this.matricula;
+		relatorio += "\nMatrícula: " + this.matricula;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nSal?rio: " + this.salario;
+		relatorio += "\nSalário: " + this.salario;
 		relatorio += "\nVencimento mensal: " + this.getVencimentoMensal();
 		return relatorio;
 	}

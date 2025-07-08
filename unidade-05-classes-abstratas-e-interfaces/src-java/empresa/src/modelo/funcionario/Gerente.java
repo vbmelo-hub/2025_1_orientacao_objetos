@@ -3,7 +3,7 @@ package modelo.funcionario;
 import modelo.Autenticavel;
 import modelo.departamento.Departamento;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Gerente extends FuncionarioBonificavel implements Autenticavel {
 
 	private int numeroFuncionariosGerenciados;
 	private String senha;
@@ -28,6 +28,6 @@ public class Gerente extends Funcionario implements Autenticavel {
 	
 	@Override
 	public void bonificar() {
-		this.bonificacao = this.salario*0.25;
+		this.bonificacao = this.salario * 0.25;
 	}
 }
