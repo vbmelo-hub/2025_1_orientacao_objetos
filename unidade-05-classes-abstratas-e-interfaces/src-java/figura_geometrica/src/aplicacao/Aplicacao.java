@@ -25,10 +25,6 @@ public class Aplicacao {
 		figuras.add(t);
 		
 		for(FiguraGeometrica f : figuras) {
-			if(f instanceof Retangulo) {
-				System.out.println("É um retangulo");
-				
-			}
 			System.out.println("Área: " + f.getArea() + "\tPerímetro: " + f.getPerimetro());
 		}
 		

@@ -1,11 +1,12 @@
-package modelo;
+package modelo.funcionario;
 
-public class Funcionario {
+import modelo.departamento.Departamento;
+
+public abstract class Funcionario {
 	private String matricula;
 	private String nome;
 	private String cpf;
 	protected double salario;
-	protected double bonificacao;
 	private Departamento departamento;
 	
 	private static int contador = 0;
@@ -18,8 +19,7 @@ public class Funcionario {
 		contador++;
 		this.matricula = this.definirMatricula();
 	}
-	
-	
+
 
 	public Funcionario(String nome, String cpf, double salario, Departamento departamento) {
 		this(nome, cpf, departamento);
@@ -37,9 +37,6 @@ public class Funcionario {
 		return mat.toUpperCase();
 	}
 
-	public void bonificar() {
-		this.bonificacao = salario*0.15;
-	}
 	
 	public boolean concederAumento(double salario) {
 		//Verificar se a mudança de saldo é realmente um aumento
@@ -51,10 +48,10 @@ public class Funcionario {
 	}
 	
 	public double getVencimentoMensal() {
-		return this.salario + this.bonificacao;
+		return this.salario;
 	}
 	
-	public String getMatricula() {
+	public String getId() {
 		return this.matricula;
 	}
 	
@@ -65,10 +62,7 @@ public class Funcionario {
 	public String getCpf() {
 		return this.cpf;
 	}
-	
-	public double getBonificacao() {
-		return this.bonificacao;
-	}
+
 	
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
@@ -81,9 +75,9 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		String relatorio = "\nNome: " + this.nome;
-		relatorio += "\nMatr�cula: " + this.matricula;
+		relatorio += "\nMatrícula: " + this.matricula;
 		relatorio += "\nCPF: " + this.cpf;
-		relatorio += "\nSal�rio: " + this.salario;
+		relatorio += "\nSalário: " + this.salario;
 		relatorio += "\nVencimento mensal: " + this.getVencimentoMensal();
 		return relatorio;
 	}

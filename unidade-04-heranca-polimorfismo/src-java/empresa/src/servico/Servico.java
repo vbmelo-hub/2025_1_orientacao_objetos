@@ -1,7 +1,9 @@
 package servico;
 
 import modelo.Departamento;
+import modelo.Diretor;
 import modelo.Funcionario;
+import modelo.Gerente;
 import repositorio.BDSimulado;
 
 //Classe que implementa os casos de uso
@@ -27,14 +29,29 @@ public class Servico {
 		
 	}
 	
-	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento) {
+	public String cadastrarFuncionario(String nome, String cpf, String idDepartamento, String tipo) {
 		if(!BDSimulado.verificarDepartamento(idDepartamento)) { 
 			return "O departamento do cliente n�o existe!";
 		}
 		if(BDSimulado.verificarFuncionario(cpf)) {
 			return "CPF j� cadastrado";
 		}
-		f = new Funcionario(nome, cpf, d);
+		d = BDSimulado.getDepartamento(idDepartamento);
+		
+		
+		if (tipo.equalsIgnoreCase("funcionario")) {
+			f = new Funcionario(nome, cpf, d);
+		
+		}else if (tipo.equalsIgnoreCase("gerente")) {
+			f = new Gerente(nome, cpf, d);
+			
+
+		}else if (tipo.equalsIgnoreCase("diretor")) {
+			f = new Diretor(nome, cpf, d);
+			
+			
+		}
+	
 		BDSimulado.getDepartamento(idDepartamento).adicionarFuncionario(f); //mudança feita para 4/6
 		return "Funcion�rio cadastrado com sucesso";
 	}
